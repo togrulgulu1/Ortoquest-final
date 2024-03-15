@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+    list-style: none;
+}
+
+.con{
+    width: 90%;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
