@@ -80,7 +80,11 @@ const Navbar = () => {
                         <span className='bar2'></span>
                         <span className='bar3'></span>
 
+                        <span className='bar3'></span>
+
                     </button>
+
+
 
 
 
