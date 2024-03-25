@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
 
     const [active, setActive] = useState(false)
+    
     // const loginDiv = useRef()
 
     const click = () => {
@@ -79,14 +80,7 @@ const Navbar = () => {
                         <span className='bar1'></span>
                         <span className='bar2'></span>
                         <span className='bar3'></span>
-
-                        <span className='bar3'></span>
-
                     </button>
-
-
-
-
 
                     <div className="navLogo">
                         <Link className='link' to={"/"}>
@@ -169,8 +163,6 @@ const Navbar = () => {
                 </div>
 
             </header>
-
-
 
         </>
     )
