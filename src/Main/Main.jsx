@@ -1,17 +1,14 @@
 import React from 'react'
 import Navbar from '../layouts/Navbar'
-import Content from '../Home/Content'
-import Upcoming from '../Home/Upcoming'
+import Home from '../Home/Home'
 
 const Main = () => {
     return (
         <main>
 
             <Navbar />
-            <Content />
-            <Upcoming />
+            <Home />
 
-            
         </main>
     )
 }

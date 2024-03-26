@@ -1,5 +1,5 @@
 import React from 'react'
-import "./css/content.css"
+import "../css/content.css"
 
 const Content = () => {
 
@@ -31,10 +31,7 @@ const Content = () => {
                     <div className="headRight">
 
                         {/* <img width={620} src={image1} alt="" /> */}
-                        <div data-aos="fade-right"
-                            data-aos-anchor="#example-anchor"
-                            data-aos-offset="500"
-                            data-aos-duration="1000"
+                        <div 
                             className="image"
                         ></div>
 

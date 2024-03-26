@@ -3,36 +3,42 @@
         "id": 1,
         "title": "The First of Them III Exclusive Preview",
         "date": "COMING SOON: SEPT 10, 2020",
-        "src": "https://www.youtube.com/embed/0FsMRNCeMl4?si=zDaw5mqaKKdJqOYs"
+        "src": "https://www.youtube.com/embed/0FsMRNCeMl4?si=zDaw5mqaKKdJqOYs",
+        "image": "https://images.squarespace-cdn.com/content/v1/624b5039eaa0101b5bdb9529/1649102936183-DIAWYN7JQW2OAVE1Q82V/OtroQuest-EpisodeThumbnails-1.jpg?format=500w"
     },
     {
         "id": 2,
         "title": "Token World Review",
         "date": "JUL 15, 2020",
-        "src": "https://www.youtube.com/embed/0FsMRNCeMl4?si=9Rxoc6LWjUKede4H"
+        "src": "https://www.youtube.com/embed/0FsMRNCeMl4?si=9Rxoc6LWjUKede4H",
+        "image": "https://images.squarespace-cdn.com/content/v1/624b5039eaa0101b5bdb9529/1649102932662-QJUHDQ7ZKVQIBMC5VYAB/Release+Review+2.jpg?format=500w"
     },
     {
         "id": 3,
         "title": "One World – Guest Stream",
         "date": "JUL 9, 2020",
-        "src": "https://www.youtube.com/embed/0FsMRNCeMl4?si=Jv9gmi_bt9YXCsam"
+        "src": "https://www.youtube.com/embed/0FsMRNCeMl4?si=Jv9gmi_bt9YXCsam",
+        "image": "https://images.squarespace-cdn.com/content/v1/624b5039eaa0101b5bdb9529/1649102932667-B413VXW1OQIZK1I8H2JU/New+Game+Review+1.jpg?format=500w"
     },
     {
         "id": 4,
         "title": "No Glitches x Otro Quest Collab",
         "date": "JUN 28, 2020",
-        "src": "https://www.youtube.com/embed/0FsMRNCeMl4?si=cNRULqAJBlKfiwOE"
+        "src": "https://www.youtube.com/embed/0FsMRNCeMl4?si=cNRULqAJBlKfiwOE",
+        "image": "https://images.squarespace-cdn.com/content/v1/624b5039eaa0101b5bdb9529/1649102932671-ODEIJNXQNKAAK7IQ6BZE/New+Game+Review+4.jpg?format=500w"
     },
     {
         "id": 5,
         "title": "Release Friday – SPLITSPAWN",
         "date": "JUN 20, 2020",
-        "src": "https://www.youtube.com/embed/0FsMRNCeMl4?si=6K37Hxf6Z2Yq3D_9"
+        "src": "https://www.youtube.com/embed/0FsMRNCeMl4?si=6K37Hxf6Z2Yq3D_9",
+        "image": "https://images.squarespace-cdn.com/content/v1/624b5039eaa0101b5bdb9529/1649102932676-55S4MCOTT9SC355Z1BE7/Release+Review+5.jpg?format=500w"
     },
     {
         "id": 6,
         "title": "Sand Road Review",
         "date": "JUN 14, 2020",
-        "src": "https://www.youtube.com/embed/0FsMRNCeMl4?si=cwor6F5QhzEPGKnd"
+        "src": "https://www.youtube.com/embed/0FsMRNCeMl4?si=cwor6F5QhzEPGKnd",
+        "image": "https://images.squarespace-cdn.com/content/v1/624b5039eaa0101b5bdb9529/1649102932681-SYBEPHMTW0N8LSIT1YGX/New+Game+Preview+6.jpg?format=500w"
     }
 ]
