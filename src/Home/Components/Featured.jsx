@@ -9,6 +9,7 @@ const Featured = ({ videos }) => {
 
     const handleClick = (index) => {
         imgDivs.current[index].style.opacity = "0"
+        imgDivs.current[index].style.zIndex = "-1"
         playBtns.current[index].style.opacity = "0"
     }
 
@@ -39,7 +40,7 @@ const Featured = ({ videos }) => {
                                         <img ref={el => imgDivs.current[index] = el} src={video.image} alt="" onClick={() => handleClick(index)} />
 
                                         <button ref={el => playBtns.current[index] = el} onClick={() => handleClick(index)}>
-                                            <i class="fa-solid fa-play"></i>
+                                            <i className="fa-solid fa-play"></i>
                                         </button>
 
 

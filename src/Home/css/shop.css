@@ -1,0 +1,34 @@
+#shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e13c33;
+    color: #fff;
+    padding: 80px 0;
+}
+
+.shopHead h1 {
+    font-size: 50px;
+    background: transparent;
+    margin-bottom: 50px;
+}
+
+.shopHead{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 768px){
+    .shopHead h1{
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 440px){
+    .shopHead h1{
+        font-size: 32px;
+    }
+}
