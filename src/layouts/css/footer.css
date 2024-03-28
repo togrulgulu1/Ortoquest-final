@@ -1,0 +1,146 @@
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 80px 0;
+    position: relative;
+}
+
+#footer .flex {
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+#footer .flex div {
+    text-align: center;
+}
+
+#footer h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#footer li {
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#footer .subscribe input {
+    width: 300px;
+    height: 60px;
+    padding-left: 20px;
+    margin-right: 20px;
+    outline: none;
+    font-size: 15px;
+    border: 1px solid rgb(196, 196, 196);
+}
+
+#footer .subscribe button {
+    width: 150px;
+    height: 60px;
+    border: none;
+    border-radius: 50px;
+    background-color: #2b2b2b;
+    opacity: 0.8;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#footer .subscribe button:hover {
+    opacity: 1;
+}
+
+#footer .follow span {
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.4s;
+    color: #000000;
+}
+
+#footer .followSoc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+#footer .copyRight {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: none;
+}
+
+#footer .copyRight .link {
+    text-decoration: underline;
+    color: #000000;
+}
+
+
+#footer .copyRight span:last-child {
+    font-weight: 500;
+}
+
+
+/* RESPONSIVE */
+
+@media only screen and (max-width:1075px) {
+
+    #footer .subscribe {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #footer .subscribe input {
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+
+}
+
+@media only screen and (max-width:768px) {
+
+    #footer .flex {
+        flex-wrap: wrap;
+    }
+
+    #footer .explore,
+    #footer .support {
+        width: 50%;
+        margin-bottom: 50px;
+    }
+
+    #footer .subscribe,
+    #footer .follow {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    #footer .subscribe input {
+        width: 400px;
+        height: 60px;
+    }
+
+    #footer .subscribe button {
+        width: 250px;
+        height: 60px;
+    }
+}
+
+@media only screen and (max-width:530px){
+    #footer .subscribe input {
+        width: 100%;
+        height: 60px;
+    }
+
+}

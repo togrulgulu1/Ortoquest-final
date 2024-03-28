@@ -1,5 +1,5 @@
 import React from 'react'
-import "../css/shop.css"
+import "../assets/css/shop.css"
 import Slider from './Slider'
 import image from '../../image.json'
 

@@ -4,7 +4,8 @@ import Upcoming from './Components/Upcoming'
 import Featured from './Components/Featured'
 import videos from '../video.json'
 import Shop from './Components/Shop'
-// import images from '../image.json' 
+import Exclusive from './Components/Exclusive'
+
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             <Upcoming />
             <Featured videos={videos} />
             <Shop />
+            <Exclusive />
 
         </>
     )

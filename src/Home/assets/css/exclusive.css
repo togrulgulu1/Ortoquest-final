@@ -1,0 +1,160 @@
+#exclusive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 80px 0;
+}
+
+#exclusive .flex {
+    justify-content: space-between;
+}
+
+.excLeft {
+    width: 45%;
+}
+
+.excLeft h2 {
+    font-size: 50px;
+    margin-bottom: 30px;
+    width: 50%;
+}
+
+.excLeft p {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 50px;
+    width: 80%;
+}
+
+.excLeft button {
+    width: 250px;
+    height: 60px;
+    background-color: #e13c33d7;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.excLeft button:hover {
+    background-color: #e13c33;
+}
+
+.excRight {
+    background-image: url(../image/image3.jpeg);
+    width: 670px;
+    height: 480px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width:1025px) {
+
+    .excRight {
+        width: 600px;
+        height: 410px;
+    }
+
+    .excLeft h2 {
+        font-size: 45px;
+        margin-bottom: 20px;
+    }
+
+    .excLeft p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width:890px) {
+
+    .excRight {
+        width: 500px;
+        height: 310px;
+    }
+
+    .excLeft h2 {
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+
+    .excLeft p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .excLeft button {
+        width: 200px;
+        height: 50px;
+        font-size: 14px;
+    }
+
+}
+
+@media only screen and (max-width:768px) {
+
+    #exclusive {
+        padding: 40px 0;
+    }
+
+    #exclusive .flex {
+        flex-direction: column-reverse;
+    }
+
+    .excLeft,
+    .excRight,
+    .excLeft h2,
+    .excLeft p {
+        width: 100%;
+    }
+
+    .excRight {
+        width: 100%;
+        height: 234px;
+        margin-bottom: 50px;
+    }
+
+    .excLeft h2 {
+        margin-bottom: 25px;
+        font-size: 50px;
+    }
+
+    .excLeft p {
+        margin-bottom: 40px;
+        font-size: 20px;
+    }
+
+    .excLeft button {
+        width: 280px;
+        height: 60px;
+        font-size: 16px;
+    }
+
+}
+
+@media only screen and (max-width:530px) {
+
+    .excLeft h2 {
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+
+    .excLeft p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .excLeft button {
+        width: 100%;
+        height: 50px;
+    }
+}

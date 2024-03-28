@@ -13,7 +13,7 @@
     margin-bottom: 50px;
 }
 
-.shopHead{
+.shopHead {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,14 +21,20 @@
 
 /* RESPONSIVE */
 
-@media only screen and (max-width: 768px){
-    .shopHead h1{
+@media only screen and (max-width: 768px) {
+
+    #shop {
+        padding: 40px 0;
+    }
+
+    .shopHead h1 {
         font-size: 40px;
+        margin-bottom: 10px;
     }
 }
 
-@media only screen and (max-width: 440px){
-    .shopHead h1{
+@media only screen and (max-width: 440px) {
+    .shopHead h1 {
         font-size: 32px;
     }
 }

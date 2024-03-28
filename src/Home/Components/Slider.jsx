@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
-import "../css/slider.css"
+import "../assets/css/slider.css"
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -17,6 +17,9 @@ const Slider = ({ image }) => {
                 style={{
                     "--swiper-navigation-color": "#fff",
                     "--swiper-navigation-size": "35px",
+                    "--swiper-pagination-color": "#fff",
+                    "--swiper-pagination-bullet-inactive-color": "#fff",
+                    "--swiper-pagination-bullet-inactive-opacity": "0.4",
                 }}
                 slidesPerView={2}
                 spaceBetween={20}
@@ -44,9 +47,9 @@ const Slider = ({ image }) => {
                         spaceBetween: 50
                     },
                 }}
-                // pagination={{
-                //     clickable: true,
-                // }}
+                pagination={{
+                    clickable: true,
+                }}
                 navigation={true}
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper"

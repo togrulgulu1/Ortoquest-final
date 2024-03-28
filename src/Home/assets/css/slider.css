@@ -2,6 +2,7 @@
     width: 560px;
     height: 550px;
     cursor: pointer;
+    margin-bottom: -50px;
 }
 
 .imgDiv h4 {
@@ -12,6 +13,7 @@
 .imgDiv p {
     font-size: 24px;
     font-weight: 500;
+    padding-bottom: 50px;
 }
 
 .imgDiv {
@@ -37,6 +39,7 @@
     .imgDiv img {
         width: 360px;
         height: 350px;
+        margin-bottom: -10px;
     }
 
     .imgDiv h4{

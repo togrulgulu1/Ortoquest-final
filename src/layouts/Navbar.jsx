@@ -27,6 +27,7 @@ const Navbar = () => {
 
         }
     }
+    
     // useEffect(() => {
 
     //     const closeMenuClick = (event) => {

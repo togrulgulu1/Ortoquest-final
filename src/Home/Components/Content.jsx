@@ -1,5 +1,5 @@
 import React from 'react'
-import "../css/content.css"
+import "../assets/css/content.css"
 
 const Content = () => {
 
@@ -7,6 +7,7 @@ const Content = () => {
         <>
 
             <section id='content'>
+
                 <div className="con flex">
 
                     <div className="headLeft">
@@ -21,23 +22,19 @@ const Content = () => {
                         </div>
 
                         <div className="contentBtn">
-                            <button>
-                                read more
-                            </button>
+                            <button>read more</button>
                         </div>
 
                     </div>
 
                     <div className="headRight">
 
-                        {/* <img width={620} src={image1} alt="" /> */}
-                        <div 
-                            className="image"
-                        ></div>
+                        <div className="image"></div>
 
                     </div>
 
                 </div>
+
             </section>
 
         </>

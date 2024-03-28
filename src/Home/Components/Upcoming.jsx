@@ -1,6 +1,5 @@
 import React from "react";
-import "../css/upcoming.css"
-// import image2 from "./assets/image/image2.jpeg"
+import "../assets/css/upcoming.css"
 
 const Upcoming = () => {
     return (

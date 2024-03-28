@@ -54,7 +54,7 @@
 
 
 .headRight .image {
-    background-image: url(../assets/image/image1.jpeg);
+    background-image: url(../image/image1.jpeg);
     width: 620px;
     height: 410px;
     background-position: center;
@@ -92,6 +92,10 @@
 
 @media only screen and (max-width:768px) {
 
+    #content {
+        padding: 40px 0;
+    }
+
     #content .flex {
         flex-direction: column-reverse;
     }
@@ -115,19 +119,19 @@
         margin-bottom: 40px;
     }
 
-    .headLeft .contentBtn button{
+    .headLeft .contentBtn button {
         width: 250px;
         height: 50px;
     }
 }
 
-@media only screen and (max-width:530px){
-    
+@media only screen and (max-width:530px) {
+
     .headLeft .contentHead h1 {
         font-size: 35px;
     }
 
-    .headLeft .contentBtn button{
+    .headLeft .contentBtn button {
         width: 100%;
         height: 50px;
     }

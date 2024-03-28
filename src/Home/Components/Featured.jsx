@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import "../css/featured.css"
+import "../assets/css/featured.css"
 
 
 const Featured = ({ videos }) => {
@@ -9,14 +9,14 @@ const Featured = ({ videos }) => {
 
     const handleClick = (index) => {
         imgDivs.current[index].style.opacity = "0"
-        imgDivs.current[index].style.zIndex = "-1"
+        imgDivs.current[index].style.zIndex = "-5"
         playBtns.current[index].style.opacity = "0"
+        playBtns.current[index].style.zIndex = "-5"
+
     }
 
     return (
         <>
-
-        {/* VIDEOLAR OXUNMUR !!! */}
 
             <section id="featured">
 
