@@ -1,17 +1,19 @@
 import React from 'react'
 import Navbar from '../layouts/Navbar'
-import Home from '../Home/Home'
 import Footer from '../layouts/Footer'
+import { Outlet } from 'react-router-dom'
 
 const Main = () => {
     return (
-        <main>
-
+        <>
             <Navbar />
-            <Home />
-            <Footer />
+            <main>
 
-        </main>
+                <Outlet />
+
+            </main>
+            <Footer />
+        </>
     )
 }
 

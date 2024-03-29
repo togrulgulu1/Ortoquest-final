@@ -33,7 +33,7 @@ const Featured = ({ videos }) => {
 
                             {videos.map((video, index) => {
 
-                                return (
+                                return video.id < 7 ? (
 
                                     <div className='videoComp' key={video.id} id={video.id}>
 
@@ -44,7 +44,7 @@ const Featured = ({ videos }) => {
                                         </button>
 
 
-                                        <iframe src={video.src} frameborder="0"></iframe>
+                                        <iframe src={video.src} frameBorder="0"></iframe>
 
                                         <p className='videoTitle'>{video.title}</p>
 
@@ -52,7 +52,7 @@ const Featured = ({ videos }) => {
 
                                     </div>
 
-                                );
+                                ) : null;
 
                             })}
 

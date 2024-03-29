@@ -10,7 +10,7 @@ import Exclusive from './Components/Exclusive'
 const Home = () => {
     return (
         <>
-
+            
             <Content />
             <Upcoming />
             <Featured videos={videos} />

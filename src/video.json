@@ -40,5 +40,26 @@
         "date": "JUN 14, 2020",
         "src": "https://www.youtube.com/embed/0FsMRNCeMl4?si=cwor6F5QhzEPGKnd",
         "image": "https://images.squarespace-cdn.com/content/v1/624b5039eaa0101b5bdb9529/1649102932681-SYBEPHMTW0N8LSIT1YGX/New+Game+Preview+6.jpg?format=500w"
+    },
+    {
+        "id": 7,
+        "title": "Games Daily",
+        "desc": "Explore my newest video series, where I stream a different game every day.",
+        "src": "https://www.youtube.com/embed/0FsMRNCeMl4?si=j96fct2jfDsk--OY",
+        "image": "https://images.squarespace-cdn.com/content/v1/624b5039eaa0101b5bdb9529/1649102932686-KIGDUEBAMF4D2LAND94G/Show-Daily.jpg?format=500w"
+    },
+    {
+        "id": 8,
+        "title": "Tutorials",
+        "desc": "Explore my newest video series, where I do tutorials on beating levels, tricks, and more.",
+        "src": "https://www.youtube.com/embed/0FsMRNCeMl4?si=BkMxUV-GAiOw-umL",
+        "image": "https://images.squarespace-cdn.com/content/v1/624b5039eaa0101b5bdb9529/1649102932691-SRYQLMIOR1HO9VPVFGPL/Show-Tutotrials.jpg?format=500w"
+    },
+    {
+        "id": 9,
+        "title": "Newly Released Reviews",
+        "desc": "Explore my newest video series, where I review newly released games.",
+        "src": "https://www.youtube.com/embed/0FsMRNCeMl4?si=izkrZsBLACr8sNi_",
+        "image": "https://images.squarespace-cdn.com/content/v1/624b5039eaa0101b5bdb9529/1649102932697-PZV75F8QQJ6IKWWLOWZH/Show-Reviews.jpg?format=500w"
     }
 ]

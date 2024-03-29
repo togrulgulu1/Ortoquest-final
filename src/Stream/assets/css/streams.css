@@ -1,0 +1,63 @@
+#streams {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.streamHead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.streamHead h1 {
+    font-size: 50px;
+    margin-bottom: 100px;
+}
+
+.streamDate h4 {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.streamDate div {
+    text-align: center;
+    width: 33.333%;
+    margin-bottom: 100px;
+}
+
+.streamMain .flex {
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width:980px) {
+
+    .streamHead h1 {
+        font-size: 40px;
+    }
+
+    .streamDate div {
+        width: 50%;
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width:540px) {
+
+    .streamHead h1 {
+        font-size: 30px;
+    }
+
+    .streamDate h4{
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+
+    #streams {
+        padding: 30px 0;
+    }
+}

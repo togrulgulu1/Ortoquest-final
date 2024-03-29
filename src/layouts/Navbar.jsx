@@ -3,15 +3,20 @@ import "./css/navbar.css"
 import { IoLogoTwitch, IoLogoInstagram } from "react-icons/io";
 import { FaYoutube } from "react-icons/fa6";
 import { PiShoppingCartSimpleFill } from "react-icons/pi";
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 // import Login from './Login';
 
 
 const Navbar = () => {
 
     const [active, setActive] = useState(false)
-    
+    const [active2, setActive2] = useState(null)
+
     // const loginDiv = useRef()
+
+    const handleLinkClick = () => {
+        setActive(!active);
+    };
 
     const click = () => {
 
@@ -27,7 +32,7 @@ const Navbar = () => {
 
         }
     }
-    
+
     // useEffect(() => {
 
     //     const closeMenuClick = (event) => {
@@ -69,7 +74,6 @@ const Navbar = () => {
     // }
 
     // !active ? loginDiv.current.style.display = "block" : loginDiv.current.style.display = "none"
-
     return (
         <>
 
@@ -84,9 +88,13 @@ const Navbar = () => {
                     </button>
 
                     <div className="navLogo">
-                        <Link className='link' to={"/"}>
-                            <p>OTROQUEST</p>
-                        </Link>
+                        <NavLink
+                            className={`active2 ${active2 === 'otroquest' ? 'active2' : ''}`}
+                            onClick={() => setActive2('otroquest')}
+                            to={"/"}
+                        >
+                            <p>otroquest</p>
+                        </NavLink>
                     </div>
 
                     <div className='navRight'>
@@ -94,8 +102,26 @@ const Navbar = () => {
                         <nav className={`navbar ${active ? 'active' : ''}`}>
 
                             <ul className='navMenu flex'>
-                                <li>stream</li>
-                                <li>videos</li>
+
+                                <li>
+                                    <NavLink
+                                        to={"/stream"}
+                                        className={`link ${active2 === 'stream' ? 'active' : ''}`}
+                                        onClick={() => setActive2('stream')}
+                                    >
+                                        <span>stream</span>
+                                    </NavLink>
+                                </li>
+
+                                <li>
+                                    <NavLink
+                                        to={"/videos"}
+                                        className={`link ${active2 === 'videos' ? 'active' : ''}`}
+                                        onClick={() => setActive2('videos')}
+                                    >
+                                        <span>videos</span>
+                                    </NavLink>
+                                </li>
                                 <li>merch</li>
                                 <li>support</li>
                                 <li>blog</li>
