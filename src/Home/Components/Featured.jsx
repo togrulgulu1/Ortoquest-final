@@ -1,19 +1,21 @@
 import React, { useRef } from 'react'
 import "../assets/css/featured.css"
+import Video from './Video'
+import videos from "../../video.json"
 
 
-const Featured = ({ videos }) => {
+const Featured = () => {
 
-    let imgDivs = useRef([])
-    let playBtns = useRef([])
+    // let imgDivs = useRef([])
+    // let playBtns = useRef([])
 
-    const handleClick = (index) => {
-        imgDivs.current[index].style.opacity = "0"
-        imgDivs.current[index].style.zIndex = "-5"
-        playBtns.current[index].style.opacity = "0"
-        playBtns.current[index].style.zIndex = "-5"
+    // const handleClick = (index) => {
+    //     imgDivs.current[index].style.opacity = "0"
+    //     imgDivs.current[index].style.zIndex = "-5"
+    //     playBtns.current[index].style.opacity = "0"
+    //     playBtns.current[index].style.zIndex = "-5"
 
-    }
+    // }
 
     return (
         <>
@@ -29,7 +31,9 @@ const Featured = ({ videos }) => {
                             </h1>
                         </div>
 
-                        <div className="featDiv">
+                        <Video videos={videos}/>
+
+                        {/* <div className="featDiv">
 
                             {videos.map((video, index) => {
 
@@ -56,7 +60,7 @@ const Featured = ({ videos }) => {
 
                             })}
 
-                        </div>
+                        </div> */}
 
                     </div>
 

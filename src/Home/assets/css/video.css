@@ -1,0 +1,101 @@
+.videoDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.videoComp {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.videoComp img {
+    z-index: 1;
+    width: 398px;
+    height: 230px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+}
+
+.videoComp button {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: transparent;
+    border: none;
+}
+
+.videoComp i {
+    color: #fff;
+    background-color: transparent;
+    font-size: 38px;
+    cursor: pointer;
+    text-shadow: rgba(0, 0, 0, 0.479) 1px 3px 8px;
+}
+
+.videoComp iframe {
+    width: 398px;
+    height: 230px;
+}
+
+.videoComp p {
+    color: #fff;
+    margin-top: 20px;
+}
+
+.videoComp .videoTitle {
+    font-weight: 600;
+}
+
+
+
+@media only screen and (max-width:890px) {
+
+    .videoComp img,
+    .videoComp iframe {
+        width: 338px;
+        height: 190px;
+    }
+
+}
+
+@media only screen and (max-width:768px) {
+
+
+    .videoComp img,
+    .videoComp iframe {
+        width: 398px;
+        height: 230px;
+    }
+
+    .videoDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media only screen and (max-width: 440px) {
+
+    .videoComp img,
+    .videoComp iframe {
+        width: 288px;
+        height: 170px;
+    }
+
+    .videoComp button {
+        position: absolute;
+        top: 32%;
+    }
+
+    .videoComp i {
+        font-size: 30px;
+    }
+
+}

@@ -5,6 +5,7 @@ import Home from './Home/Home';
 import Main from './Main/Main'
 import Aos from "aos"
 import "aos/dist/aos.css"
+import Videos from './Videos/Videos';
 
 const App = () => {
     const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const App = () => {
                     path: "/stream",
                     element: <Stream />
                 },
+                {
+                    path: "/videos",
+                    element: <Videos />
+                }
             ]
         }
 

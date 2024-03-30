@@ -1,34 +1,38 @@
-#featured {
+#shows {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 80px 0;
+    padding: 40px 0;
     background-color: #000;
 }
 
-.featHead {
+.showsHead {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 140px;
+    margin-bottom: 80px;
+    /* margin-top: 50px; */
 }
 
-.featHead h1 {
+.showsHead h1 {
     color: #fff;
     font-size: 50px;
 }
 
+
 @media only screen and (max-width:768px) {
 
-    #featured {
-        padding: 40px 0;
+    #shows {
+        padding: 20px 0;
     }
 
-    .featHead{
+    .showsHead{
         margin-bottom: 80px;
+        margin-top: 40px;
+        text-align: center;
     }
 
-    .featHead h1 {
+    .showsHead h1 {
         font-size: 40px;
     }
 
@@ -36,7 +40,15 @@
 
 @media only screen and (max-width: 440px) {
 
-    .featHead h1 {
+    #shows{
+        padding: 10px 0;
+    }
+
+    .showsHead{
+        margin-top: 0;
+    }
+
+    .showsHead h1 {
         font-size: 32px;
     }
 }

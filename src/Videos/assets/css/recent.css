@@ -1,4 +1,4 @@
-#featured {
+#recent {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,29 +6,33 @@
     background-color: #000;
 }
 
-.featHead {
+.recentHead {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 140px;
+    margin-bottom: 80px;
+    margin-top: 50px;
 }
 
-.featHead h1 {
+.recentHead h1 {
     color: #fff;
     font-size: 50px;
 }
 
+
 @media only screen and (max-width:768px) {
 
-    #featured {
+    #recent {
         padding: 40px 0;
     }
 
-    .featHead{
-        margin-bottom: 80px;
+    .recentHead{
+        margin-bottom: 60px;
+        margin-top: 80px;
+        text-align: center;
     }
 
-    .featHead h1 {
+    .recentHead h1 {
         font-size: 40px;
     }
 
@@ -36,7 +40,7 @@
 
 @media only screen and (max-width: 440px) {
 
-    .featHead h1 {
+    .recentHead h1 {
         font-size: 32px;
     }
 }
