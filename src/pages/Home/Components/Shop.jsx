@@ -1,7 +1,7 @@
 import React from 'react'
 import "../assets/css/shop.css"
 import Slider from './Slider'
-import image from '../../image.json'
+import image from '../../../image.json'
 
 const Shop = () => {
     return (

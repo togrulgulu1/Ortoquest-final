@@ -3,7 +3,7 @@ import "./css/navbar.css"
 import { IoLogoTwitch, IoLogoInstagram } from "react-icons/io";
 import { FaYoutube } from "react-icons/fa6";
 import { PiShoppingCartSimpleFill } from "react-icons/pi";
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 // import Login from './Login';
 
 
@@ -74,6 +74,23 @@ const Navbar = () => {
     // }
 
     // !active ? loginDiv.current.style.display = "block" : loginDiv.current.style.display = "none"
+    
+    let location = useLocation();
+
+    useEffect(() => {
+
+        const navbar = document.querySelector("#header")
+
+        if (location.pathname === "/merch") {
+
+            navbar.style.backgroundColor = "#e13c33";
+
+        }else{
+            navbar.style.backgroundColor = "#000";
+        }
+
+
+    })
     return (
         <>
 
@@ -122,7 +139,16 @@ const Navbar = () => {
                                         <span>videos</span>
                                     </NavLink>
                                 </li>
-                                <li>merch</li>
+                                <li>
+                                    <NavLink
+                                        to={"/merch"}
+                                        className={`link ${active2 === 'merch' ? 'active' : ''}`}
+                                        onClick={() => setActive2('merch')}
+                                    >
+                                        <span>merch</span>
+                                    </NavLink>
+                                </li>
+
                                 <li>support</li>
                                 <li>blog</li>
                             </ul>

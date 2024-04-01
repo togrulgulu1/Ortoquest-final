@@ -1,6 +1,6 @@
 import React from 'react'
 import Preview from './Components/Preview'
-import videos from '../video.json'
+import videos from '../../video.json'
 import Streams from './Components/Streams'
 
 

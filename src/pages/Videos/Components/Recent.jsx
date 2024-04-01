@@ -1,6 +1,6 @@
 import React,{useRef} from 'react'
 import "../assets/css/recent.css"
-import videos from "../../video.json"
+import videos from "../../../video.json"
 import Video from '../../Home/Components/Video'
 
 const Recent = () => {

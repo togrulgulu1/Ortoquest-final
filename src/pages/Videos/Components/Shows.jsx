@@ -1,6 +1,6 @@
 import React from 'react'
 import ShowsVideos from './ShowsVideos'
-import videos from "../../video.json"
+import videos from "../../../video.json"
 import "../assets/css/shows.css"
 
 const Shows = () => {

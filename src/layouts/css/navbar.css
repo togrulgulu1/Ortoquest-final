@@ -7,11 +7,14 @@
     background-color: #000;
     color: #fff;
     margin-bottom: 70px;
-    background-color: #000;
     position: fixed;
     top: 0;
     z-index: 9999;
 }
+
+/* #header.bg-red {
+    background-color: transparent;
+} */
 
 .flex {
     justify-content: space-between;
@@ -43,16 +46,16 @@
 
 }
 
-.link.active{
+.link.active {
     text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
     font-weight: 500;
 }
 
-.active2{
+.active2 {
     text-decoration: none;
 }
 
-.link.active2{
+.link.active2 {
     text-decoration: none !important;
 }
 
@@ -65,7 +68,7 @@
     position: relative;
 }
 
-.navMenu li:hover{
+.navMenu li:hover {
     text-shadow: 0px 3px 6px rgba(255, 255, 255, 1);
 }
 
@@ -90,8 +93,8 @@
 }
 
 .social span {
-    font-size: 22px;
-    padding-left: 25px;
+    font-size: 20px;
+    padding-left: 30px;
     cursor: pointer;
     transition: 0.4s;
     color: #fff;

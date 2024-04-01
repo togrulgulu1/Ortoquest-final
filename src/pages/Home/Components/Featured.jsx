@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import "../assets/css/featured.css"
 import Video from './Video'
-import videos from "../../video.json"
+import videos from "../../../video.json"
 
 
 const Featured = () => {
