@@ -81,8 +81,9 @@
 }
 
 #footer .copyRight .link {
-    text-decoration: underline;
+    text-decoration: none;
     color: #000000;
+    border-bottom: 1px solid #000000;
 }
 
 

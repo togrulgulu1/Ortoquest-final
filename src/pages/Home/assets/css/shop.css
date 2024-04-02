@@ -10,13 +10,20 @@
 .shopHead h1 {
     font-size: 50px;
     background: transparent;
-    margin-bottom: 50px;
+    margin-bottom: 5px;
 }
 
 .shopHead {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.stopHeadLink{
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 50px;
 }
 
 /* RESPONSIVE */

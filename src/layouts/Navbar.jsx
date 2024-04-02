@@ -74,19 +74,21 @@ const Navbar = () => {
     // }
 
     // !active ? loginDiv.current.style.display = "block" : loginDiv.current.style.display = "none"
-    
+
     let location = useLocation();
 
     useEffect(() => {
 
         const navbar = document.querySelector("#header")
 
-        if (location.pathname === "/merch") {
+        if (location.pathname === "/merch" || location.pathname.includes("/product-details")) {
 
             navbar.style.backgroundColor = "#e13c33";
 
-        }else{
+        } else {
+
             navbar.style.backgroundColor = "#000";
+            
         }
 
 

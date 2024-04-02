@@ -56,6 +56,14 @@
     transition: 1s ease-in;
 }
 
+.imgDivShop h4,
+.imgDivShop p{
+    color: #fff;
+}
+
+.shopLink{
+    text-decoration: none;
+}
 
 .imgDivShop h4 {
     font-size: 20px;

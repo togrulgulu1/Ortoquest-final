@@ -7,11 +7,13 @@ import Aos from "aos"
 import "aos/dist/aos.css"
 import Videos from './pages/Videos/Videos';
 import Merch from './pages/Merch/Merch';
+import Details from './pages/Details/Details';
+
 
 
 const App = () => {
-    
-    
+
+
     const router = createBrowserRouter([
         {
             element: <Main />,
@@ -32,6 +34,10 @@ const App = () => {
                 {
                     path: "/merch",
                     element: <Merch />
+                },
+                {
+                    path: "/product-details/:id",
+                    element: <Details/>
                 }
             ]
         }

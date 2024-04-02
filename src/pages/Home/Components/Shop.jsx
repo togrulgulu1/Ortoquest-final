@@ -2,6 +2,9 @@ import React from 'react'
 import "../assets/css/shop.css"
 import Slider from './Slider'
 import image from '../../../image.json'
+import { Link } from 'react-router-dom'
+
+
 
 const Shop = () => {
     return (
@@ -14,7 +17,9 @@ const Shop = () => {
                     <div className="shopMain">
 
                         <div className="shopHead">
-                            <h1>Shop Merch</h1>
+                            <Link className='stopHeadLink' href="#" to={"/merch"}>
+                                <h1>Shop Merch</h1>
+                            </Link>
                         </div>
 
                         <Slider image={image} />

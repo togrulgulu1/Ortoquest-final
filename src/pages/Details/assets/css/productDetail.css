@@ -1,0 +1,113 @@
+#products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+    background-color: #e13c33;
+    color: #fff;
+}
+
+.productMain {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* margin-top: 80px; */
+}
+
+.productTop {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.productMain .flex {
+    flex-direction: column;
+}
+
+.productImg img {
+    width: 600px;
+    height: 590px;
+}
+
+.productTop .productData {
+    margin-top: 150px;
+}
+
+.productData h2 {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.productData .productPrice {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.productData .productDesc {
+    font-size: 17px;
+    line-height: 1.4;
+    margin-bottom: 50px;
+}
+
+.selectSize {
+    margin-bottom: 30px;
+}
+
+.selectSize p {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.selectSize select {
+    width: 250px;
+    height: 50px;
+    font-size: 14px;
+    outline: none;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    padding: 10px;
+}
+
+.selectSize option {
+    color: #000;
+}
+
+.selectCount{
+    margin-bottom: 40px;
+}
+
+.selectCount p{
+    margin-bottom: 5px;
+}
+
+.selectCount input{
+    width: 85px;
+    height: 50px;
+    padding: 15px;
+    font-size: 16px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    outline: none;
+}
+
+.productData button {
+    width: 250px;
+    height: 50px;
+    font-size: 15px;
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.productData button:hover {
+    background-color: #fff;
+    color: #e13c33;
+    font-weight: 500;
+    border: none;
+}

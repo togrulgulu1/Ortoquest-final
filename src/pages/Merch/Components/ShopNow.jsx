@@ -1,5 +1,6 @@
 import React from 'react'
 import "../assets/css/shopNow.css"
+import { Link } from 'react-router-dom'
 
 const ShopNow = ({ images }) => {
     return (
@@ -15,24 +16,30 @@ const ShopNow = ({ images }) => {
 
                     <div className="shopNowImg flex">
 
+
                         {images.map(image => (
 
-                            <div key={image.id}>
+                            <Link className='shopLink' to={`/product-details/${image.id}`}>
 
-                                <div className="imgDivShop" id={image.id}>
+                                <div key={image.id}>
 
-                                    <div className="imageDiv">
-                                        <img className='imgSmall' src={image.src} alt="" />
-                                        <img className='imgBig' src={image.src2} alt="" />
+                                    <div className="imgDivShop" id={image.id}>
+
+                                        <div className="imageDiv">
+                                            <img className='imgSmall' src={image.src} alt="" />
+                                            <img className='imgBig' src={image.src2} alt="" />
+                                        </div>
+
+                                        <h4>{image.title}</h4>
+                                        <p>${image.price}.00</p>
                                     </div>
 
-                                    <h4>{image.title}</h4>
-                                    <p>${image.price}.00</p>
                                 </div>
 
-                            </div>
-
+                            </Link>
+                            
                         ))}
+
                     </div>
 
                 </div>

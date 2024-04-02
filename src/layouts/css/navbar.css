@@ -12,11 +12,7 @@
     z-index: 9999;
 }
 
-/* #header.bg-red {
-    background-color: transparent;
-} */
-
-.flex {
+#header .flex {
     justify-content: space-between;
 }
 

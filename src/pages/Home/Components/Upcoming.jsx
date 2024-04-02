@@ -1,5 +1,8 @@
 import React from "react";
 import "../assets/css/upcoming.css"
+import { Link } from "react-router-dom";
+
+
 
 const Upcoming = () => {
     return (
@@ -32,7 +35,10 @@ const Upcoming = () => {
                         </div>
 
                         <div className="streamBtn">
-                            <button>full schedule</button>
+                            <Link to={"/stream"}>
+
+                                <button>full schedule</button>
+                            </Link>
                         </div>
 
                     </div>
