@@ -1,6 +1,6 @@
 import React from 'react'
 import "./css/footer.css"
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { IoLogoTwitch, IoLogoInstagram } from "react-icons/io";
 import { FaYoutube } from "react-icons/fa6";
 
@@ -15,17 +15,38 @@ const Footer = () => {
                     <div className="explore">
                         <h3>Explore</h3>
                         <ul>
-                            <li>Stream</li>
-                            <li>Videos</li>
-                            <li>Blog</li>
+                            <li>
+                                <NavLink className="footLink" to={"/stream"}>
+                                    <span>stream</span>
+                                </NavLink>
+                            </li>
+
+                            <li>
+                                <NavLink className="footLink" to={"/videos"}>
+                                    <span>videos</span>
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink className="footLink" to={"/blog"}>
+                                    <span>blog</span>
+                                </NavLink>
+                            </li>
                         </ul>
                     </div>
 
                     <div className="support">
                         <h3>Support</h3>
                         <ul>
-                            <li>Merch</li>
-                            <li>support</li>
+                            <li>
+                                <NavLink className="footLink" to={"/merch"}>
+                                    <span>merch</span>
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink className="footLink" to={"/support"}>
+                                    <span>support</span>
+                                </NavLink>
+                            </li>
                             <li>About</li>
                         </ul>
                     </div>

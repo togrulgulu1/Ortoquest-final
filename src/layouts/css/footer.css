@@ -91,6 +91,12 @@
     font-weight: 500;
 }
 
+#footer .footLink{
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+
 
 /* RESPONSIVE */
 
