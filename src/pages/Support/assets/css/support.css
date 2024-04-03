@@ -1,0 +1,95 @@
+#support{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+    background-color: #000;
+    color: #fff;
+}
+
+.supportMain{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 80px;
+}
+
+.supportMain div{
+    width: 50%;
+    text-align: center;
+    margin-bottom: 100px;
+    flex-direction: column;
+}
+
+.supportMain h2{
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.supportMain p{
+    font-size: 16px;
+    width: 400px;
+    margin-bottom: 30px;
+}
+
+.supportMain button{
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    background-color: #e13c33;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.supportMain button:hover{
+    opacity: 1;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width:980px){
+
+    .supportMain h2{
+        font-size: 30px;
+    }
+
+    .supportMain p{
+        font-size: 14px;
+        width: 350px;
+    }
+
+}
+
+@media only screen and (max-width:768px){
+
+    .supportMain div{
+        width: 100%;
+        margin-bottom: 70px;
+    }
+
+    .supportMain h2{
+        font-size: 35px;
+    }
+
+    .supportMain p{
+        width: 80%;
+    }
+
+}
+
+@media only screen and (max-width:440px){
+
+    .supportMain{
+        margin-top: 50px;
+    }
+
+    .supportMain button{
+        width: 100%;
+    }
+}

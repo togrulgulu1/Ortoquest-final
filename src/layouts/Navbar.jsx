@@ -85,10 +85,17 @@ const Navbar = () => {
 
             navbar.style.backgroundColor = "#e13c33";
 
-        } else {
+        } 
+        // else if (location.pathname === "/cart") {
+
+        //     navbar.style.backgroundColor = "#fff";
+        //     navbar.style.color = "#000"
+
+        // }
+        else {
 
             navbar.style.backgroundColor = "#000";
-            
+
         }
 
 
@@ -151,7 +158,15 @@ const Navbar = () => {
                                     </NavLink>
                                 </li>
 
-                                <li>support</li>
+                                <li>
+                                    <NavLink
+                                        to={"/support"}
+                                        className={`link ${active2 === 'support' ? 'active' : ''}`}
+                                        onClick={() => setActive2('support')}
+                                    >
+                                        <span>support</span>
+                                    </NavLink>
+                                </li>
                                 <li>blog</li>
                             </ul>
 
@@ -208,10 +223,16 @@ const Navbar = () => {
                         </div>
 
                         <div className="cart">
-                            <span className='flex'>
-                                <PiShoppingCartSimpleFill />
-                            </span>
+                            <NavLink to={"/cart"}
+                                className={`link ${active2 === 'cart' ? 'active' : ''}`}
+                                onClick={() => setActive2('cart')}
+                            >
+                                <span className='flex'>
+                                    <PiShoppingCartSimpleFill />
+                                </span>
+                            </NavLink>
                         </div>
+
 
                     </div>
 

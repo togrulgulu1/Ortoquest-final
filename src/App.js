@@ -1,13 +1,15 @@
 import React, { useEffect } from 'react'
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { createBrowserRouter, Outlet, RouterProvider, useLocation } from "react-router-dom"
 import Stream from './pages/Stream/Stream';
 import Home from './pages/Home/Home';
 import Main from './Main/Main'
 import Aos from "aos"
-import "aos/dist/aos.css"
 import Videos from './pages/Videos/Videos';
 import Merch from './pages/Merch/Merch';
 import Details from './pages/Details/Details';
+import Cart from './pages/Cart/Cart';
+import "aos/dist/aos.css"
+import Support from './pages/Support/Support';
 
 
 
@@ -37,8 +39,17 @@ const App = () => {
                 },
                 {
                     path: "/product-details/:id",
-                    element: <Details/>
+                    element: <Details />
+                },
+                {
+                    path: "/support",
+                    element: <Support />
+                },
+                {
+                    path: "/cart",
+                    element: <Cart />
                 }
+
             ]
         }
 
@@ -46,6 +57,7 @@ const App = () => {
     useEffect(() => {
         Aos.init();
     }, [])
+
 
     return (
         <>
