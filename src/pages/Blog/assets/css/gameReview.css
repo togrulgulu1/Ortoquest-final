@@ -1,0 +1,83 @@
+#gameReview{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 80px 0;
+}
+
+.gameReviewMain{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.gameReviewRight{
+    background-image: url("../image/image-2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 350px;
+}
+
+.gameReviewLeft{
+    width: 50%;
+}
+
+.gameReviewLeft h4{
+    font-size: 30px;
+    margin: 30px 0;
+}
+
+.gameReviewLeft p{
+    line-height: 1.4;
+    font-size: 15px;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width:1200px) {
+    .gameReviewRight {
+        width: 505px;
+        height: 320px;
+    }
+}
+
+@media only screen and (max-width:980px){
+    .gameReviewRight {
+        width: 405px;
+        height: 250px;
+    }
+
+    .gameReviewLeft h4{
+        font-size: 25px;
+    }
+
+    .gameReviewLeft p{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width:768px){
+
+    #gameReview{
+        padding: 40px 0;
+    }
+
+    .gameReviewMain{
+        flex-direction: column-reverse;
+    }
+
+    .gameReviewLeft,
+    .gameReviewRight{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:440px){
+    .gameReviewRight{
+        height: 200px;
+    }
+}

@@ -85,7 +85,7 @@ const Navbar = () => {
 
             navbar.style.backgroundColor = "#e13c33";
 
-        } 
+        }
         // else if (location.pathname === "/cart") {
 
         //     navbar.style.backgroundColor = "#fff";
@@ -167,7 +167,15 @@ const Navbar = () => {
                                         <span>support</span>
                                     </NavLink>
                                 </li>
-                                <li>blog</li>
+                                <li>
+                                    <NavLink
+                                        to={"/blog"}
+                                        className={`link ${active2 === 'blog' ? 'active' : ''}`}
+                                        onClick={() => setActive2('blog')}
+                                    >
+                                        <span>blog</span>
+                                    </NavLink>
+                                </li>
                             </ul>
 
                             {/* <button onClick={clickLogin} className="loginBtn">Login</button> */}

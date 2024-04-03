@@ -8,8 +8,9 @@ import Videos from './pages/Videos/Videos';
 import Merch from './pages/Merch/Merch';
 import Details from './pages/Details/Details';
 import Cart from './pages/Cart/Cart';
-import "aos/dist/aos.css"
 import Support from './pages/Support/Support';
+import BLog from './pages/Blog/BLog';
+import "aos/dist/aos.css"
 
 
 
@@ -44,6 +45,10 @@ const App = () => {
                 {
                     path: "/support",
                     element: <Support />
+                },
+                {
+                    path: "/blog",
+                    element: <BLog />
                 },
                 {
                     path: "/cart",

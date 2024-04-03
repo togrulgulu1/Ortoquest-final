@@ -8,6 +8,10 @@
     background-color: #000;
 }
 
+#upcoming .flex{
+    justify-content: space-between;
+}
+
 .upLeft {
     background-image: url(../image/image2.jpeg);
     background-repeat: no-repeat;
