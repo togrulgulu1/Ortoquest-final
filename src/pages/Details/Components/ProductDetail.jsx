@@ -1,7 +1,7 @@
 import React from 'react'
 import "../assets/css/productDetail.css"
 import { useParams } from 'react-router-dom'
-
+import 'swiper/css';
 
 const ProductDetail = ({ images }) => {
 
@@ -15,8 +15,6 @@ const ProductDetail = ({ images }) => {
             <div className="con flex">
 
                 <div className="productMain">
-
-                    <div className="productTop">
 
                         <div className='productImg flex'>
                             <img src={product.src} alt="" />
@@ -46,33 +44,14 @@ const ProductDetail = ({ images }) => {
 
                             <button>Add to Cart</button>
 
-                        </div>
-
-
-
                     </div>
-
-                    <div className="productBottom">
-
-                    </div>
-
 
                 </div>
 
-
             </div>
 
-
-
-            {/* <div>
-                {images.map((image) => (
-                    <div key={image.id}>
-                        <img src={image.src} alt="" />
-                    </div>
-                ))}
-            </div> */}
-
         </section>
+
     )
 }
 

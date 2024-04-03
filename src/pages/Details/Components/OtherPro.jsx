@@ -1,17 +1,17 @@
 import React from 'react'
-import "../assets/css/shopNow.css"
 import { Link } from 'react-router-dom'
+import "../assets/css/otherPro.css"
 
-const ShopNow = ({ images }) => {
+const OtherPro = ({ images }) => {
     return (
-        <section id='shopNow'>
+        <section id='other'>
 
             <div className="con flex">
 
-                <div className="shopNowMain">
+                <div className="otherMain">
 
-                    <div className="shopNowHead">
-                        <h1>Shop Now</h1>
+                    <div className="otherHead">
+                        <h2>Check these out</h2>
                     </div>
 
                     <div className="shopNowImg flex">
@@ -36,7 +36,7 @@ const ShopNow = ({ images }) => {
                                 </div>
 
                             </Link>
-                            
+
                         ))}
 
                     </div>
@@ -49,4 +49,4 @@ const ShopNow = ({ images }) => {
     )
 }
 
-export default ShopNow
+export default OtherPro

@@ -9,28 +9,23 @@
 
 .productMain {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    /* margin-top: 80px; */
-}
-
-.productTop {
-    display: flex;
     justify-content: space-between;
     gap: 50px;
 }
 
-.productMain .flex {
+.productMain .productImg {
+    display: flex;
+    justify-content: center;
     flex-direction: column;
 }
 
-.productImg img {
+.productImg  img {
     width: 600px;
     height: 590px;
 }
 
-.productTop .productData {
-    margin-top: 150px;
+.productMain .productData {
+    margin-top: 100px;
 }
 
 .productData h2 {
@@ -45,7 +40,7 @@
 }
 
 .productData .productDesc {
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.4;
     margin-bottom: 50px;
 }
@@ -54,7 +49,8 @@
     margin-bottom: 30px;
 }
 
-.selectSize p {
+.selectSize p,
+.selectCount p {
     font-weight: 500;
     margin-bottom: 5px;
 }
@@ -74,15 +70,11 @@
     color: #000;
 }
 
-.selectCount{
+.selectCount {
     margin-bottom: 40px;
 }
 
-.selectCount p{
-    margin-bottom: 5px;
-}
-
-.selectCount input{
+.selectCount input {
     width: 85px;
     height: 50px;
     padding: 15px;
@@ -110,4 +102,166 @@
     color: #e13c33;
     font-weight: 500;
     border: none;
+}
+
+.productData button:active {
+    background-color: #fff;
+    color: #e13c33;
+    font-weight: 500;
+    border: none;
+}
+
+
+/* RESPONSIVE */
+
+@media only screen and (max-width:1200px) {
+    .productImg img {
+        width: 500px;
+        height: 490px;
+    }
+
+    .productData h2 {
+        font-size: 45px;
+    }
+
+    .productData .productPrice {
+        font-size: 22px;
+    }
+
+    .productData .productDesc {
+        font-size: 15px;
+
+    }
+}
+
+@media only screen and (max-width:980px) {
+    .productImg img {
+        width: 480px;
+        height: 470px;
+    }
+
+    .productData h2 {
+        font-size: 40px;
+    }
+
+    .productData .productPrice {
+        font-size: 22px;
+    }
+
+    .productData .productDesc {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width:890px) {
+    .productImg img {
+        width: 400px;
+        height: 390px;
+    }
+
+    .productData h2 {
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+
+    .productData .productPrice {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .productData .productDesc {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+
+    .selectSize select,
+    .productData button {
+        width: 200px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .selectCount input {
+        width: 75px;
+        height: 40px;
+    }
+
+
+    .selectSize p,
+    .selectCount p {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width:768px){
+
+    .productImg img {
+        width: 450px;
+        height: 440px;
+    }
+
+    .productImg img:nth-child(2){
+        display: none;
+    }
+
+    .productMain{
+        flex-direction: column;
+    }
+
+    .productMain .productData {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width:550px){
+    .productImg img {
+        width: 400px;
+        height: 390px;
+    }
+}
+
+@media only screen and (max-width:440px){
+    .productImg img {
+        width: 280px;
+        height: 270px;
+    }
+
+    .productData h2 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .productData .productPrice {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .productData .productDesc {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .selectSize select,
+    .productData button {
+        width: 150px;
+        height: 40px;
+        font-size: 12px;
+    }
+    .productData button {
+        width: 100%;
+    }
+
+    .selectCount input {
+        width: 75px;
+        height: 30px;
+    }
+
+
+
+    .selectSize p,
+    .selectCount p {
+        font-size: 12px;
+        font-weight: 400;
+    }
 }

@@ -57,11 +57,11 @@
 }
 
 .imgDivShop h4,
-.imgDivShop p{
+.imgDivShop p {
     color: #fff;
 }
 
-.shopLink{
+.shopLink {
     text-decoration: none;
 }
 
@@ -78,10 +78,12 @@
 /* RESPONSIVE */
 
 @media only screen and (max-width:1075px) {
-    .imgDivShop img {
+
+    .imgDivShop .imageDiv img {
         width: 400px;
         height: 390px;
     }
+
 }
 
 @media only screen and (max-width:890px) {
@@ -91,7 +93,7 @@
         margin-bottom: 40px;
     }
 
-    .imgDivShop img {
+    .imgDivShop .imageDiv img {
         width: 300px;
         height: 290px;
     }
@@ -103,7 +105,7 @@
         margin-bottom: 20px;
     }
 
-    .imgDivShop img {
+    .imgDivShop .imageDiv img {
         width: 400px;
         height: 390px;
     }
@@ -119,7 +121,7 @@
 
 @media only screen and (max-width:440px) {
 
-    .imgDivShop img {
+    .imgDivShop .imageDiv img {
         width: 280px;
         height: 270px;
     }
