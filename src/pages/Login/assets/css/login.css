@@ -1,0 +1,163 @@
+#login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 80px 0;
+}
+
+.loginHead h1 {
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.loginMain {
+    padding: 40px;
+    margin-top: 50px;
+    border: 1px solid #fff;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.loginDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
+.formDiv .flex {
+    flex-direction: column;
+    gap: 30px;
+}
+
+.formDiv input,
+.formDiv button,
+.loginOther button {
+    width: 250px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+}
+
+.formDiv input {
+    padding-left: 10px;
+    font-size: 14px;
+    outline: none;
+}
+
+.formDiv button {
+    background-color: #e13c33;
+    opacity: 0.8;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.formDiv button:hover {
+    opacity: 1;
+}
+
+.loginOther {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.loginOther button {
+    padding-left: 10px;
+    font-size: 18px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.loginOther span {
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.loginLink{
+    text-decoration: none;
+}
+
+.forgotLink {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+}
+
+.slash {
+    font-size: 18px;
+}
+
+.or{
+    display: none;
+}
+
+/* RESPONSOVE */
+
+@media only screen and (max-width:980px) {
+
+    .formDiv input,
+    .formDiv button,
+    .loginOther button {
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+
+    .loginMain{
+        border: none;
+        margin-top: 0;
+    }
+
+    .slash{
+        display: none;
+    }
+
+    .or{
+        display: block;
+    }
+
+    .loginDiv{
+        flex-direction: column;
+    }
+
+    .formDiv input,
+    .formDiv button,
+    .loginOther button {
+        width: 250px;
+    }
+}
+
+@media only screen and (max-width:440px){
+    
+    .loginMain{
+        padding: 40px 20px;
+    }
+
+    .loginHead h1{
+        font-size: 20px;
+    }
+    .formDiv input,
+    .formDiv button,
+    .loginOther button {
+        width: 240px;
+        height: 45px;
+    }
+
+    .loginDiv{
+        gap: 30px;
+    }
+}

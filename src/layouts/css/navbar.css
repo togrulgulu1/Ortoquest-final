@@ -64,6 +64,11 @@
     position: relative;
 }
 
+.navMenu li:last-child{
+    text-transform: capitalize;
+    margin-left: 30px;
+}
+
 .navMenu li:hover {
     text-shadow: 0px 3px 6px rgba(255, 255, 255, 1);
 }
@@ -146,7 +151,6 @@
         padding: 35px 0;
     }
 
-
     .burgerMenu {
         flex-direction: column;
         background: transparent;
@@ -168,7 +172,7 @@
         align-items: center;
         justify-content: center;
         gap: 25px;
-        margin-top: 50px;
+        margin-top: 30px;
     }
 
     .socialBurger span {
@@ -177,14 +181,6 @@
         transition: 0.4s;
         color: #fff;
     }
-
-    /* 
-    .loginBtn{
-        position: absolute;
-        left: 50%;
-        top: 63.5%;
-        transform: translate(-50%, -50%);
-    } */
 
     .navbar {
         position: fixed;
@@ -203,14 +199,17 @@
         flex-direction: column;
         margin-bottom: 20px;
         text-align: center;
-        gap: 40px;
+        gap: 30px;
     }
 
     .navMenu li {
         font-size: 25px;
         font-weight: 400;
         cursor: pointer;
+    }
 
+    .navMenu li:last-child{
+        margin-left: 0;
     }
 
     .navbar.active {
@@ -241,5 +240,13 @@
         background: transparent;
         border: none;
         position: relative;
+    }
+
+    .socialBurger span{
+        font-size: 20px;
+    }
+
+    .navMenu li{
+        font-size: 20px;
     }
 }
