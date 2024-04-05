@@ -67,7 +67,10 @@ const Navbar = () => {
                     <div className="navLogo">
                         <NavLink
                             className={`active2 ${active2 === 'otroquest' ? 'active2' : ''}`}
-                            onClick={() => setActive2('otroquest')}
+                            onClick={() => {
+                                setActive2('otroquest')
+                                setActive(!active);
+                            }}
                             to={"/"}
                         >
                             <p>otroquest</p>
@@ -84,7 +87,10 @@ const Navbar = () => {
                                     <NavLink
                                         to={"/stream"}
                                         className={`link ${active2 === 'stream' ? 'active' : ''}`}
-                                        onClick={() => setActive2('stream')}
+                                        onClick={() => {
+                                            setActive2('stream');
+                                            setActive(!active);
+                                        }}
                                     >
                                         <span>stream</span>
                                     </NavLink>
@@ -94,7 +100,10 @@ const Navbar = () => {
                                     <NavLink
                                         to={"/videos"}
                                         className={`link ${active2 === 'videos' ? 'active' : ''}`}
-                                        onClick={() => setActive2('videos')}
+                                        onClick={() => {
+                                            setActive2('videos');
+                                            setActive(!active);
+                                        }}
                                     >
                                         <span>videos</span>
                                     </NavLink>
@@ -103,7 +112,10 @@ const Navbar = () => {
                                     <NavLink
                                         to={"/merch"}
                                         className={`link ${active2 === 'merch' ? 'active' : ''}`}
-                                        onClick={() => setActive2('merch')}
+                                        onClick={() => {
+                                            setActive2('merch');
+                                            setActive(!active);
+                                        }}
                                     >
                                         <span>merch</span>
                                     </NavLink>
@@ -113,7 +125,10 @@ const Navbar = () => {
                                     <NavLink
                                         to={"/support"}
                                         className={`link ${active2 === 'support' ? 'active' : ''}`}
-                                        onClick={() => setActive2('support')}
+                                        onClick={() => {
+                                            setActive2('support');
+                                            setActive(!active);
+                                        }}
                                     >
                                         <span>support</span>
                                     </NavLink>
@@ -122,7 +137,10 @@ const Navbar = () => {
                                     <NavLink
                                         to={"/blog"}
                                         className={`link ${active2 === 'blog' ? 'active' : ''}`}
-                                        onClick={() => setActive2('blog')}
+                                        onClick={() => {
+                                            setActive2('blog')
+                                            setActive(!active);
+                                        }}
                                     >
                                         <span>blog</span>
                                     </NavLink>
@@ -131,7 +149,10 @@ const Navbar = () => {
                                     <NavLink
                                         to={"/login"}
                                         className={`link ${active2 === 'login' ? 'active' : ''}`}
-                                        onClick={() => setActive2('login')}
+                                        onClick={() => {
+                                            setActive2('login')
+                                            setActive(!active);
+                                        }}
                                     >
                                         <span>login</span>
                                     </NavLink>
@@ -197,7 +218,7 @@ const Navbar = () => {
 
                 </div>
 
-            </header>
+            </header >
 
         </>
     )
