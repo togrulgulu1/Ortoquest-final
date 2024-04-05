@@ -16,20 +16,20 @@ const Footer = () => {
                         <h3>Explore</h3>
                         <ul>
                             <li>
-                                <NavLink className="footLink" to={"/stream"}>
+                                <Link className="footLink" to={"/stream"}>
                                     <span>stream</span>
-                                </NavLink>
+                                </Link>
                             </li>
 
                             <li>
-                                <NavLink className="footLink" to={"/videos"}>
+                                <Link className="footLink" to={"/videos"}>
                                     <span>videos</span>
-                                </NavLink>
+                                </Link>
                             </li>
                             <li>
-                                <NavLink className="footLink" to={"/blog"}>
+                                <Link className="footLink" to={"/blog"}>
                                     <span>blog</span>
-                                </NavLink>
+                                </Link>
                             </li>
                         </ul>
                     </div>
@@ -38,14 +38,14 @@ const Footer = () => {
                         <h3>Support</h3>
                         <ul>
                             <li>
-                                <NavLink className="footLink" to={"/merch"}>
+                                <Link className="footLink" to={"/merch"}>
                                     <span>merch</span>
-                                </NavLink>
+                                </Link>
                             </li>
                             <li>
-                                <NavLink className="footLink" to={"/support"}>
+                                <Link className="footLink" to={"/support"}>
                                     <span>support</span>
-                                </NavLink>
+                                </Link>
                             </li>
                             <li>About</li>
                         </ul>

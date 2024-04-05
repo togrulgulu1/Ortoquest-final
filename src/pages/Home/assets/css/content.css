@@ -6,7 +6,10 @@
     margin-top: 75px;
     padding: 80px 0;
     background-color: #000;
+}
 
+#content .flex{
+    justify-content: space-between;
 }
 
 .headLeft {
@@ -81,12 +84,12 @@
 @media only screen and (max-width:890px) {
 
     .headLeft .contentHead h1 {
-        font-size: 45px;
+        font-size: 40px;
     }
 
     .headRight .image {
-        width: 415px;
-        height: 290px;
+        width: 395px;
+        height: 280px;
     }
 }
 

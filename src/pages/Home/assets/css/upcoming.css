@@ -106,8 +106,14 @@
 }
 
 @media only screen and (max-width:960px) {
+
     .upRight .flex {
         flex-direction: column;
+    }
+
+    .streamBtn button {
+        width: 200px;
+        height: 50px;
     }
 }
 

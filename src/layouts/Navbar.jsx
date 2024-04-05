@@ -9,15 +9,10 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 const Navbar = () => {
 
     const [active, setActive] = useState(false)
-    const [active2, setActive2] = useState(null)
 
     const click = () => {
 
         setActive(!active)
-
-    }
-
-    useEffect(() => {
 
         if (!active) {
 
@@ -28,7 +23,9 @@ const Navbar = () => {
             document.body.style.overflow = "hidden"
 
         }
-    }, [active])
+
+    }
+
 
     let location = useLocation();
 
@@ -54,9 +51,7 @@ const Navbar = () => {
             header.style.backgroundColor = "#000";
             navbar.style.backgroundColor = "#000";
 
-
         }
-
 
     })
     return (
@@ -73,13 +68,7 @@ const Navbar = () => {
                     </button>
 
                     <div className="navLogo">
-                        <NavLink
-                            className={'link'}
-                            onClick={() => {
-                                setActive(!active);
-                            }}
-                            to={"/"}
-                        >
+                        <NavLink to={"/"} className="logoLink">
                             <p>otroquest</p>
                         </NavLink>
                     </div>
@@ -106,9 +95,7 @@ const Navbar = () => {
                                     <NavLink
                                         to={"/videos"}
                                         className={'link'}
-                                        onClick={() => {
-                                            setActive(!active);
-                                        }}
+                                        onClick={() => { setActive(!active); }}
                                     >
                                         <span>videos</span>
                                     </NavLink>
@@ -117,9 +104,7 @@ const Navbar = () => {
                                     <NavLink
                                         to={"/merch"}
                                         className={'link'}
-                                        onClick={() => {
-                                            setActive(!active);
-                                        }}
+                                        onClick={() => { setActive(!active); }}
                                     >
                                         <span>merch</span>
                                     </NavLink>
@@ -129,10 +114,7 @@ const Navbar = () => {
                                     <NavLink
                                         to={"/support"}
                                         className={'link'}
-                                        onClick={() => {
-                                            setActive2('support');
-                                            setActive(!active);
-                                        }}
+                                        onClick={() => { setActive(!active); }}
                                     >
                                         <span>support</span>
                                     </NavLink>
@@ -141,10 +123,7 @@ const Navbar = () => {
                                     <NavLink
                                         to={"/blog"}
                                         className={'link'}
-                                        onClick={() => {
-                                            setActive2('blog')
-                                            setActive(!active);
-                                        }}
+                                        onClick={() => { setActive(!active); }}
                                     >
                                         <span>blog</span>
                                     </NavLink>
@@ -153,10 +132,7 @@ const Navbar = () => {
                                     <NavLink
                                         to={"/login"}
                                         className={'link'}
-                                        onClick={() => {
-                                            setActive2('login')
-                                            setActive(!active);
-                                        }}
+                                        onClick={() => { setActive(!active); }}
                                     >
                                         <span>login</span>
                                     </NavLink>
@@ -207,9 +183,9 @@ const Navbar = () => {
                         </div>
 
                         <div className="cart">
-                            <NavLink to={"/cart"}
-                                className={`link ${active2 === 'cart' ? 'active' : ''}`}
-                                onClick={() => setActive2('cart')}
+                            <NavLink
+                                to={"/cart"}
+                                className={`link`}
                             >
                                 <span className='flex'>
                                     <PiShoppingCartSimpleFill />

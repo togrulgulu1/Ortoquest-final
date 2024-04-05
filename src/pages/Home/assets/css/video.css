@@ -10,10 +10,14 @@
     margin-bottom: 50px;
 }
 
+.videoComp img,
+.videoComp iframe{
+    width: 440px;
+    height: 260px;
+}
+
 .videoComp img {
     z-index: 1;
-    width: 398px;
-    height: 230px;
     position: absolute;
     top: 0;
     left: 0;
@@ -38,11 +42,6 @@
     text-shadow: rgba(0, 0, 0, 0.479) 1px 3px 8px;
 }
 
-.videoComp iframe {
-    width: 398px;
-    height: 230px;
-}
-
 .videoComp p {
     color: #fff;
     margin-top: 20px;
@@ -52,6 +51,15 @@
     font-weight: 600;
 }
 
+/* RESPONSIVE */
+
+@media only screen and (max-width:1075px){
+    .videoComp img,
+    .videoComp iframe {
+        width: 400px;
+        height: 250px;
+    }
+}
 
 
 @media only screen and (max-width:890px) {

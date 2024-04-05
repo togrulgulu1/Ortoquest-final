@@ -55,9 +55,13 @@
     margin-bottom: 5px;
 }
 
-.selectSize select {
+.selectSize select,
+.productData button{
     width: 250px;
-    height: 50px;
+    height: 60px;
+}
+
+.selectSize select {
     font-size: 14px;
     outline: none;
     border: 1px solid #fff;
@@ -86,8 +90,6 @@
 }
 
 .productData button {
-    width: 250px;
-    height: 50px;
     font-size: 15px;
     text-transform: uppercase;
     border: 1px solid #fff;
@@ -178,7 +180,7 @@
     .selectSize select,
     .productData button {
         width: 200px;
-        height: 40px;
+        height: 60px;
         font-size: 14px;
     }
 
@@ -245,8 +247,8 @@
     .selectSize select,
     .productData button {
         width: 150px;
-        height: 40px;
-        font-size: 12px;
+        height: 60px;
+        font-size: 14px;
     }
     .productData button {
         width: 100%;
@@ -254,7 +256,7 @@
 
     .selectCount input {
         width: 75px;
-        height: 30px;
+        height: 40px;
     }
 
 
