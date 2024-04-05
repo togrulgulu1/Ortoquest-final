@@ -29,6 +29,11 @@
     margin-bottom: 40px;
 }
 
+/* .formDiv{
+    border-right: 1px solid #fff;
+    padding-right: 70px;
+} */
+
 .formDiv .flex {
     flex-direction: column;
     gap: 30px;

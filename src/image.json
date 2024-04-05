@@ -1,5 +1,6 @@
 [
     {
+        "slug": "grid-t-shirt",
         "id": 1,
         "title": "Grid T-Shirt",
         "price": 25.00,
@@ -8,6 +9,7 @@
         "desc": "This is an item of clothing. It is hand-sewn from high quality fabric, and features seams, hems, cuffs, and a neckline. Perfect for wearing on a particular occasion, this pairs well with other items available in our collection. Made on Earth."
     },
     {
+        "slug": "otro-life-t-shirt",
         "id": 2,
         "title": "Otro Life T-Shirt",
         "price": 35.00,
@@ -16,6 +18,7 @@
         "desc": "This is an item of clothing. It is hand-sewn from high quality fabric, and features seams, hems, cuffs, and a neckline. Perfect for wearing on a particular occasion, this pairs well with other items available in our collection. Made on Earth."
     },
     {
+        "slug": "oq-x-oq-t-shirt",
         "id": 3,
         "title": "OQ x OQ T-Shirt",
         "price": 35.00,
@@ -24,6 +27,7 @@
         "desc": "This is an item of clothing. It is hand-sewn from high quality fabric, and features seams, hems, cuffs, and a neckline. Perfect for wearing on a particular occasion, this pairs well with other items available in our collection. Made on Earth."
     },
     {
+        "slug": "otroquest-t-shirt",
         "id": 4,
         "title": "OtroQuest T-Shirt",
         "price": 25.00,

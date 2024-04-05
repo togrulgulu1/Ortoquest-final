@@ -5,8 +5,8 @@ import 'swiper/css';
 
 const ProductDetail = ({ images }) => {
 
-    const { id } = useParams()
-    const product = images.find((image) => image.id === parseInt(id))
+    const { slug } = useParams()
+    const product = images.find((image) => image.slug === slug)
 
     return (
 
@@ -29,11 +29,11 @@ const ProductDetail = ({ images }) => {
                             <div className="selectSize">
                                 <p>Size:</p>
                                 <select>
-                                    <option>Select Size</option>
-                                    <option>Small</option>
-                                    <option>Medium</option>
-                                    <option>Large</option>
-                                    <option>X-Large</option>
+                                    <option value="all">Select Size</option>
+                                    <option value="small">Small</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="large">Large</option>
+                                    <option value="xlarge">X-Large</option>
                                 </select>
                             </div>
 

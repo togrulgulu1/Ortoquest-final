@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { createBrowserRouter, Outlet, RouterProvider, useLocation } from "react-router-dom"
 import Stream from './pages/Stream/Stream';
 import Home from './pages/Home/Home';
-import Main from './Main/Main'
+import Main from "./layouts/Main"
 import Aos from "aos"
 import Videos from './pages/Videos/Videos';
 import Merch from './pages/Merch/Merch';
@@ -41,7 +41,7 @@ const App = () => {
                     element: <Merch />
                 },
                 {
-                    path: "/product-details/:id",
+                    path: "/product-details/:slug",
                     element: <Details />
                 },
                 {
