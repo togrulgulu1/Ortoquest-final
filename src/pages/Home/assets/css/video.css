@@ -12,8 +12,8 @@
 
 .videoComp img,
 .videoComp iframe{
-    width: 440px;
-    height: 260px;
+    width: 398px;
+    height: 240px;
 }
 
 .videoComp img {
@@ -53,13 +53,6 @@
 
 /* RESPONSIVE */
 
-@media only screen and (max-width:1075px){
-    .videoComp img,
-    .videoComp iframe {
-        width: 400px;
-        height: 250px;
-    }
-}
 
 
 @media only screen and (max-width:890px) {

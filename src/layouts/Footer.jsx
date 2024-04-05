@@ -90,6 +90,7 @@ const Footer = () => {
                         <Link className='link' to={"https://www.linkedin.com/in/togrulquluyev/"} target='_blank'>
                             <span>TOGRULGULU</span>
                         </Link>
+                        
                     </div>
 
                 </div>
