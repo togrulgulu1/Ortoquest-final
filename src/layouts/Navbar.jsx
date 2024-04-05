@@ -15,37 +15,45 @@ const Navbar = () => {
 
         setActive(!active)
 
+    }
+
+    useEffect(() => {
+
         if (!active) {
-
-            document.body.style.overflow = "hidden"
-
-        } else {
 
             document.body.style.overflow = "auto"
 
+        } else {
+
+            document.body.style.overflow = "hidden"
+
         }
-    }
+    }, [active])
 
     let location = useLocation();
 
     useEffect(() => {
 
-        const navbar = document.querySelector("#header")
+        const header = document.querySelector("#header")
+        const navbar = document.querySelector(".navbar")
 
         if (location.pathname === "/merch" || location.pathname.includes("/product-details")) {
 
+            header.style.backgroundColor = "#e13c33";
             navbar.style.backgroundColor = "#e13c33";
 
         }
         // else if (location.pathname === "/cart") {
 
-        //     navbar.style.backgroundColor = "#fff";
-        //     navbar.style.color = "#000"
+        //     header.style.backgroundColor = "#fff";
+        //     header.style.color = "#000"
 
         // }
         else {
 
+            header.style.backgroundColor = "#000";
             navbar.style.backgroundColor = "#000";
+
 
         }
 
@@ -66,9 +74,8 @@ const Navbar = () => {
 
                     <div className="navLogo">
                         <NavLink
-                            className={`active2 ${active2 === 'otroquest' ? 'active2' : ''}`}
+                            className={'link'}
                             onClick={() => {
-                                setActive2('otroquest')
                                 setActive(!active);
                             }}
                             to={"/"}
@@ -86,9 +93,8 @@ const Navbar = () => {
                                 <li>
                                     <NavLink
                                         to={"/stream"}
-                                        className={`link ${active2 === 'stream' ? 'active' : ''}`}
+                                        className={'link'}
                                         onClick={() => {
-                                            setActive2('stream');
                                             setActive(!active);
                                         }}
                                     >
@@ -99,9 +105,8 @@ const Navbar = () => {
                                 <li>
                                     <NavLink
                                         to={"/videos"}
-                                        className={`link ${active2 === 'videos' ? 'active' : ''}`}
+                                        className={'link'}
                                         onClick={() => {
-                                            setActive2('videos');
                                             setActive(!active);
                                         }}
                                     >
@@ -111,9 +116,8 @@ const Navbar = () => {
                                 <li>
                                     <NavLink
                                         to={"/merch"}
-                                        className={`link ${active2 === 'merch' ? 'active' : ''}`}
+                                        className={'link'}
                                         onClick={() => {
-                                            setActive2('merch');
                                             setActive(!active);
                                         }}
                                     >
@@ -124,7 +128,7 @@ const Navbar = () => {
                                 <li>
                                     <NavLink
                                         to={"/support"}
-                                        className={`link ${active2 === 'support' ? 'active' : ''}`}
+                                        className={'link'}
                                         onClick={() => {
                                             setActive2('support');
                                             setActive(!active);
@@ -136,7 +140,7 @@ const Navbar = () => {
                                 <li>
                                     <NavLink
                                         to={"/blog"}
-                                        className={`link ${active2 === 'blog' ? 'active' : ''}`}
+                                        className={'link'}
                                         onClick={() => {
                                             setActive2('blog')
                                             setActive(!active);
@@ -148,7 +152,7 @@ const Navbar = () => {
                                 <li>
                                     <NavLink
                                         to={"/login"}
-                                        className={`link ${active2 === 'login' ? 'active' : ''}`}
+                                        className={'link'}
                                         onClick={() => {
                                             setActive2('login')
                                             setActive(!active);
