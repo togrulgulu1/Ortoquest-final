@@ -1,3 +1,13 @@
 #cart{
     height: 100vh;
 }
+
+.cartMain{
+    margin-top: 150px;
+}
+
+.cartMain img{
+    width: 300px;
+    height: 200px;
+
+}

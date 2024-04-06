@@ -14,15 +14,15 @@ const Navbar = () => {
 
         setActive(!active)
 
-        if (!active) {
+        // if (!active) {
 
-            document.body.style.overflow = "auto"
+        //     document.body.style.overflow = "hidden"
 
-        } else {
+        // } else {
 
-            document.body.style.overflow = "hidden"
+        //     document.body.style.overflow = "auto"
 
-        }
+        // }
 
     }
 
@@ -34,19 +34,12 @@ const Navbar = () => {
         const header = document.querySelector("#header")
         const navbar = document.querySelector(".navbar")
 
-        if (location.pathname === "/merch" || location.pathname.includes("/product-details")) {
+        if (location.pathname === "/merch" || location.pathname.includes("/product-details") || location.pathname.includes("/cart")) {
 
             header.style.backgroundColor = "#e13c33";
             navbar.style.backgroundColor = "#e13c33";
 
-        }
-        // else if (location.pathname === "/cart") {
-
-        //     header.style.backgroundColor = "#fff";
-        //     header.style.color = "#000"
-
-        // }
-        else {
+        } else {
 
             header.style.backgroundColor = "#000";
             navbar.style.backgroundColor = "#000";
@@ -83,9 +76,7 @@ const Navbar = () => {
                                     <NavLink
                                         to={"/stream"}
                                         className={'link'}
-                                        onClick={() => {
-                                            setActive(!active);
-                                        }}
+                                        onClick={() => { setActive(!active); }}
                                     >
                                         <span>stream</span>
                                     </NavLink>

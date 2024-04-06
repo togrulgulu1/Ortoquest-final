@@ -32,7 +32,7 @@
     font-weight: 600;
     cursor: pointer;
     text-transform: uppercase;
-    color: #fff !important;
+    color: #fff;
 }
 
 .logoLink{
@@ -116,7 +116,7 @@
 .burgerMenu span {
     width: 30px;
     height: 1.2px;
-    background-color: #a8a8a8;
+    background-color: #fff;
     border-radius: 5px;
     display: block;
     transition: 0.3s;
