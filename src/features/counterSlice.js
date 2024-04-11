@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  cartItem: [],
+  cartItem: localStorage.getItem('cartItem') ? JSON.parse(localStorage.getItem('cartItem')) : [],
   cartTotalQuantity: 0,
   cartTotalAmount: 0,
 }
@@ -13,25 +13,30 @@ export const cartSlice = createSlice({
 
     addToCart(state, action) {
 
-      const itemIndex = state.cartItem.findIndex((item) => item.id === action.payload.id);
+      const { id, title, price, src, selectedSize } = action.payload;
+      const itemIndex = state.cartItem.findIndex((item) => item.id === id && item.selectedSize === selectedSize);
 
       if (itemIndex >= 0) {
 
         state.cartItem[itemIndex].cartQuantity += 1
-        // state.cartItem[itemIndex].totalPrice += action.payload.price
+        state.cartItem[itemIndex].totalPrice += price
 
       } else {
 
-        const tempProduct = { ...action.payload, cartQuantity: 1 }
+        const tempProduct = {  id, title, price, src, cartQuantity: 1, totalPrice: price, selectedSize }
         state.cartItem.push(tempProduct)
 
       }
+
+      localStorage.setItem('cartItem', JSON.stringify(state.cartItem))
+      state.selectedSize = selectedSize
 
     },
     deleteBtn(state, action) {
 
       const nextCart = state.cartItem.filter((item) => item.id !== action.payload.id);
       state.cartItem = nextCart;
+      localStorage.setItem('cartItem', JSON.stringify(state.cartItem))
 
     },
 
@@ -42,13 +47,16 @@ export const cartSlice = createSlice({
       if (state.cartItem[itemIndex].cartQuantity > 1) {
 
         state.cartItem[itemIndex].cartQuantity -= 1
+        state.cartItem[itemIndex].totalPrice -= action.payload.price
 
-      } else if (state.cartItem[itemIndex].cartQuantity <= 1){
+      } else if (state.cartItem[itemIndex].cartQuantity <= 1) {
 
         state.cartItem[itemIndex].cartQuantity = 1
 
       };
       
+      localStorage.setItem('cartItem', JSON.stringify(state.cartItem))
+
     }
 
   }

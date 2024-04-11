@@ -46,7 +46,7 @@
 }
 
 .selectSize {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .selectSize p,
@@ -111,6 +111,11 @@
     color: #e13c33;
     font-weight: 500;
     border: none;
+}
+
+.errorDesc{
+    background-color: #fff;
+    width: 250px;
 }
 
 

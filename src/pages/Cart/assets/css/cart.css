@@ -18,6 +18,8 @@
     align-items: center;
     flex-direction: column;
     margin-top: 50px;
+    width: 100%;
+
 }
 
 .cartMain h2{
@@ -32,6 +34,7 @@
 }
 
 .cartDiv{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     /* align-items: center; */

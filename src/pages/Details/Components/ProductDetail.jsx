@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "../assets/css/productDetail.css"
 import { useParams } from 'react-router-dom'
 import { useDispatch } from "react-redux"
@@ -7,13 +7,25 @@ import { addToCart } from '../../../features/counterSlice';
 
 const ProductDetail = ({ images }) => {
 
+    let [selectedSize, setSelectedSize] = useState('all');
+    let [error, setError] = useState(' ')
     const { slug } = useParams()
     const product = images.find((image) => image.slug === slug)
     const dispatch = useDispatch()
 
     const handleClick = (product) => {
-        dispatch(addToCart(product))
-        console.log(product);
+
+        if (selectedSize === 'all') {
+
+            setError('Please select a size')
+
+        } else {
+
+            dispatch(addToCart({ ...product, selectedSize }))
+            setError('')
+
+        }
+
     }
 
     return (
@@ -36,20 +48,20 @@ const ProductDetail = ({ images }) => {
                         <p className='productDesc'>{product.desc}</p>
                         <div className="selectSize">
                             <p>Size:</p>
-                            <select>
+                            <select value={selectedSize} onChange={(e) => setSelectedSize(e.target.value)}>
                                 <option value="all">Select Size</option>
-                                <option value="small">Small</option>
-                                <option value="medium">Medium</option>
-                                <option value="large">Large</option>
-                                <option value="xlarge">X-Large</option>
+                                <option value="S">{product.small}</option>
+                                <option value="M">{product.medium}</option>
+                                <option value="L">{product.large}</option>
+                                <option value="X-Large">{product.xLarge}</option>
                             </select>
+                        {error && <p className='errorDesc flex' style={{ color: 'red' }}>{error}</p>}
                         </div>
 
-                        <div className="selectCount">
+                        {/* <div className="selectCount">
                             <p>Quantity:</p>
                             <input type="number" min={1} max={10} defaultValue={1} />
-                        </div>
-
+                        </div> */}
                         <button onClick={() => handleClick(product)}>Add to Cart</button>
 
                     </div>

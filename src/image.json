@@ -3,36 +3,52 @@
         "slug": "grid-t-shirt",
         "id": 1,
         "title": "Grid T-Shirt",
-        "price": 25.00,
+        "price": 25,
         "src": "https://images.squarespace-cdn.com/content/v1/624b5039eaa0101b5bdb9529/1649102925645-UIP4PDYFYCPYTD4THPCJ/tee-shirt-crew.png?format=1000w",
         "src2": "https://images.squarespace-cdn.com/content/v1/624b5039eaa0101b5bdb9529/1649102925635-FWT4QVEF60O0YQH1RIEB/tee-shirt-crew-closeup.png?format=1000w",
-        "desc": "This is an item of clothing. It is hand-sewn from high quality fabric, and features seams, hems, cuffs, and a neckline. Perfect for wearing on a particular occasion, this pairs well with other items available in our collection. Made on Earth."
+        "desc": "This is an item of clothing. It is hand-sewn from high quality fabric, and features seams, hems, cuffs, and a neckline. Perfect for wearing on a particular occasion, this pairs well with other items available in our collection. Made on Earth.",
+        "small" : "Small",
+        "medium" : "Medium",
+        "large" : "Large",
+        "xLarge" : "X-Large"
     },
     {
         "slug": "otro-life-t-shirt",
         "id": 2,
         "title": "Otro Life T-Shirt",
-        "price": 35.00,
+        "price": 35,
         "src": "https://images.squarespace-cdn.com/content/v1/624b5039eaa0101b5bdb9529/1649102925704-LRDSY3ONLOHFU2V79LX3/bluetshirt-NEW.png?format=750w",
         "src2": "https://images.squarespace-cdn.com/content/v1/624b5039eaa0101b5bdb9529/1649102925710-8OOGXNZUUIRX6WAECDUC/bluetshirt-NEWcloseup.png",
-        "desc": "This is an item of clothing. It is hand-sewn from high quality fabric, and features seams, hems, cuffs, and a neckline. Perfect for wearing on a particular occasion, this pairs well with other items available in our collection. Made on Earth."
+        "desc": "This is an item of clothing. It is hand-sewn from high quality fabric, and features seams, hems, cuffs, and a neckline. Perfect for wearing on a particular occasion, this pairs well with other items available in our collection. Made on Earth.",
+       "small" : "Small",
+        "medium" : "Medium",
+        "large" : "Large",
+        "xLarge" : "X-Large"
     },
     {
         "slug": "oq-x-oq-t-shirt",
         "id": 3,
         "title": "OQ x OQ T-Shirt",
-        "price": 35.00,
+        "price": 35,
         "src": "https://images.squarespace-cdn.com/content/v1/624b5039eaa0101b5bdb9529/1649102925680-I6IY0O5P62Q2SHGLD3UK/blacktshirt.png?format=750w",
         "src2": "https://images.squarespace-cdn.com/content/v1/624b5039eaa0101b5bdb9529/1649102925686-9LBZXQPS80HPMVPG4OIQ/blacktshirt-closeup.png",
-        "desc": "This is an item of clothing. It is hand-sewn from high quality fabric, and features seams, hems, cuffs, and a neckline. Perfect for wearing on a particular occasion, this pairs well with other items available in our collection. Made on Earth."
+        "desc": "This is an item of clothing. It is hand-sewn from high quality fabric, and features seams, hems, cuffs, and a neckline. Perfect for wearing on a particular occasion, this pairs well with other items available in our collection. Made on Earth.",
+       "small" : "Small",
+        "medium" : "Medium",
+        "large" : "Large",
+        "xLarge" : "X-Large"
     },
     {
         "slug": "otroquest-t-shirt",
         "id": 4,
         "title": "OtroQuest T-Shirt",
-        "price": 25.00,
+        "price": 25,
         "src": "https://images.squarespace-cdn.com/content/v1/624b5039eaa0101b5bdb9529/1649102925657-OGCCWWCW4J1HEKG57CDS/tee-shirt-crew.png?format=750w",
         "src2": "https://images.squarespace-cdn.com/content/v1/624b5039eaa0101b5bdb9529/1649102925663-QZ7Y6F20YEBSOPSOJSCB/tee-shirt-crew.png?format=1000w",
-        "desc": "This is an item of clothing. It is hand-sewn from high quality fabric, and features seams, hems, cuffs, and a neckline. Perfect for wearing on a particular occasion, this pairs well with other items available in our collection. Made on Earth."
+        "desc": "This is an item of clothing. It is hand-sewn from high quality fabric, and features seams, hems, cuffs, and a neckline. Perfect for wearing on a particular occasion, this pairs well with other items available in our collection. Made on Earth.",
+       "small" : "Small",
+        "medium" : "Medium",
+        "large" : "Large",
+        "xLarge" : "X-Large"
     }
 ]

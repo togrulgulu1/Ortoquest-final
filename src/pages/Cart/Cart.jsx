@@ -7,6 +7,7 @@ import { addToCart, decreaseBtn } from '../../features/counterSlice'
 
 const Cart = () => {
 
+  const selectedSize = useSelector(state => state.cart.selectedSize);
   const cartItem = useSelector(state => state.cart.cartItem)
   const dispatch = useDispatch()
 
@@ -21,7 +22,7 @@ const Cart = () => {
       ) : (
 
         <section id='cart'>
-          
+
           <div className="con flex">
 
             <div className="cartMain">
@@ -31,17 +32,16 @@ const Cart = () => {
               {cartItem.map((item) => (
 
                 <div className='cartDiv' key={item.id} id={item.id}>
-                    {console.log(item.id)}
+
                   <img src={item.src} alt="" />
                   <p className='cartDivTitle'>{item.title}</p>
-                  <p className='cartDivSize'>Size: </p>
+                  <p className='cartDivSize'>Size: {item.selectedSize}</p>
                   <div className="btn">
                     <button onClick={() => dispatch(decreaseBtn(item))}>-</button>
                     <span>{item.cartQuantity}</span>
-                    <button onClick={() => dispatch(addToCart(item))}>+</button>
+                    <button onClick={() => dispatch(addToCart({ ...item, selectedSize }))}>+</button>
                   </div>
-                  <p className='cartDivPrice'>${item.price}.00</p>
-
+                  <p className='cartDivPrice'>${item.totalPrice}.00</p>
 
                 </div>
 
