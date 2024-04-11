@@ -1,0 +1,62 @@
+#notCart{
+    padding: 150px 0;
+    background-color: #e13c33;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#notCart .flex{
+    flex-direction: column;
+}
+
+.notMain h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.notMain p{
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.notMain button{
+    width: 250px;
+    height: 60px;
+    font-size: 15px;
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.notMain button:hover{
+    background-color: #fff;
+    color: #e13c33;
+    font-weight: 500;
+    border: none;
+}
+
+.notMain button:active{
+    background-color: #dadada;
+}
+
+    /* RESPONSIVE */
+
+@media only screen and (max-width:440px){
+    .notMain h2{
+        font-size: 27px;
+    }
+
+    .notMain p{
+        font-size: 14px;
+    }
+
+    .notMain button{
+        width: 200px;
+        font-size: 14px;
+    }
+}
