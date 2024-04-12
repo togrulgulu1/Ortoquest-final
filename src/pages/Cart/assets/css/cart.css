@@ -42,7 +42,7 @@
 }
 
 .cartDiv h3 {
-    font-size: 25px;
+    font-size: 23px;
 }
 
 .cartDiv p {
@@ -80,11 +80,6 @@
     font-weight: 500;
 }
 
-.cartDivTitle,
-.cartDivSize,
-.cartDivPrice {
-    font-size: 18px;
-}
 
 .cartDivPrice {
     font-weight: 500;
@@ -94,23 +89,20 @@
 .cartDivRight button {
     position: absolute;
     right: 0;
-}
-
-.cartDivRight p {
-    position: absolute;
-    right: 300px;
-    /* top: 5px; */
-}
-
-.cartDivRight button {
     background: none;
     border: none;
     cursor: pointer;
 }
 
+.cartDivRight p {
+    position: absolute;
+    right: 200px;
+    top: 5px;
+}
+
 .cartDivRight span {
     color: #fff;
-    font-size: 30px;
+    font-size: 30px !important;
 }
 
 .subTotal {
@@ -118,4 +110,82 @@
     bottom: -20px;
     right: 65px;
     text-transform: uppercase;
+}
+
+
+/* RESPONSIVE */
+
+
+@media only screen and (max-width:800px) {
+    .cartDivRight p {
+        right: 120px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .cartDivRight p {
+        top: 150px;
+        right: 0;
+    }
+
+    .subTotal {
+        right: 30px;
+    }
+
+}
+
+@media only screen and (max-width:550px) {
+    .cartMain img {
+        width: 150px;
+        height: 140px;
+    }
+
+    .cartDivRight p {
+        top: 100px;
+    }
+
+    .cartDiv h3 {
+        font-size: 20px;
+    }
+
+    .cartDiv p {
+        font-size: 17px;
+    }
+
+
+    .subTotal h2{
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width:380px){
+
+    .cartMain img {
+        width: 120px;
+        height: 110px;
+    }
+
+    .cartDiv h3 {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .cartDiv p {
+        font-size: 15px;
+    }
+
+    .cartDivRight p{
+        font-size: 16px;
+        top: 85px;
+    }
+
+    .subTotal{
+        position: static;
+    }
+
+    .subTotal h2{
+        margin-bottom: 0;
+        font-size: 20px;
+    }
+
 }

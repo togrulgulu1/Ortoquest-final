@@ -59,7 +59,7 @@ const Cart = () => {
               ))}
 
               <div className="subTotal">
-                <h2>subtotal: ${cart.cartTotalAmount}</h2>
+                <h2>subtotal: ${cart.cartTotalAmount}.00</h2>
               </div>
 
             </div>
