@@ -42,6 +42,7 @@ const Cart = () => {
                   <img src={item.src} alt="" />
 
                   <div className='flex'>
+
                     <h3 className='cartDivTitle'>{item.title}</h3>
                     <p className='cartDivSize'>Size: {item.selectedSize}</p>
                     <div className="btn">
@@ -49,12 +50,16 @@ const Cart = () => {
                       <span>{item.cartQuantity}</span>
                       <button onClick={() => dispatch(addToCart({ ...item }))}>+</button>
                     </div>
+
                   </div>
 
                   <div className='cartDivRight'>
+
                     <button onClick={() => dispatch(deleteBtn(item))}><span><IoClose /></span></button>
                     <p className='cartDivPrice'>${item.totalPrice}.00</p>
+                    
                   </div>
+
                 </div>
 
               ))}

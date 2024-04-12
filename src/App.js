@@ -13,6 +13,7 @@ import BLog from './pages/Blog/BLog';
 import "aos/dist/aos.css"
 import Login from './pages/Login/Login';
 import Forgot from './pages/Login/Forgot';
+import NotFound from './pages/NotFound/NotFound';
 
 
 
@@ -66,6 +67,10 @@ const App = () => {
                 }
 
             ]
+        },
+        {
+            path: "*",
+            element: <NotFound />
         }
 
     ]);

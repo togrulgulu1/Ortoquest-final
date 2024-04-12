@@ -37,7 +37,8 @@ export const cartSlice = createSlice({
 
     decreaseBtn(state, action) {
 
-      const itemIndex = state.cartItem.findIndex((item) => item.id === action.payload.id && item.selectedSize === action.payload.selectedSize)
+      const { id, selectedSize } = action.payload
+      const itemIndex = state.cartItem.findIndex((item) => item.id === id && item.selectedSize === selectedSize)
 
       if (state.cartItem[itemIndex].cartQuantity > 1) {
 
@@ -56,15 +57,15 @@ export const cartSlice = createSlice({
 
     deleteBtn(state, action) {
 
-      const {id, selectedSize} = action.payload
+      const { id, selectedSize } = action.payload
       const nextCart = state.cartItem.filter((item) => !(item.id === id && item.selectedSize === selectedSize));
       state.cartItem = nextCart;
       localStorage.setItem('cartItem', JSON.stringify(state.cartItem))
-      console.log(id);
-      console.log(selectedSize);
+
     },
 
     getTotal(state, action) {
+
       let { total, quantity } = state.cartItem.reduce((cartTotal, item) => {
         const { price, cartQuantity } = item;
         const itemTotal = price * cartQuantity;
@@ -80,7 +81,8 @@ export const cartSlice = createSlice({
       });
 
       state.cartTotalQuantity = quantity;
-      state.cartTotalAmount = total
+      state.cartTotalAmount = total;
+
     }
 
   }
