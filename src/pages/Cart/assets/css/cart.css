@@ -1,78 +1,121 @@
-#cart{
+#cart {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 80px 0;
     background-color: #e13c33;
     color: #fff;
+    position: relative;
+
 }
 
-#cart .flex{
-    /* align-items: start; */
+#cart .flex {
     justify-content: start;
 }
 
-.cartMain{
+.cartMain {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin-top: 50px;
     width: 100%;
-
 }
 
-.cartMain h2{
+.cartMain h2 {
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 80px;
 }
 
-.cartMain img{
+.cartMain img {
     width: 200px;
     height: 190px;
 }
 
-.cartDiv{
+.cartDiv {
+    position: relative;
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    /* align-items: center; */
-    /* gap: 185px; */
     border-bottom: 1px solid #fff;
     margin-bottom: 80px;
 }
 
-.cartDiv .btn{
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
+.cartDiv h3 {
+    font-size: 25px;
 }
 
-.cartDiv button{
+.cartDiv p {
+    font-size: 20px;
+}
+
+.cartDiv .flex {
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+    /* margin-top: 20px; */
+}
+
+.cartDiv .btn {
+    display: flex;
+}
+
+.cartDiv .btn button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 25px;
-    height: 25px;
-    font-size: 25px;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
     border: none;
     background: none;
     color: #fff;
+    cursor: pointer;
 }
 
-.cartDiv span{
+.cartDiv span {
     margin: 0 5px;
-    margin-top: 4px;
+    margin-top: 6px;
+    font-size: 18px;
     font-weight: 500;
 }
 
 .cartDivTitle,
 .cartDivSize,
-.cartDivPrice{
+.cartDivPrice {
     font-size: 18px;
 }
 
-.cartDivPrice{
+.cartDivPrice {
     font-weight: 500;
+}
+
+
+.cartDivRight button {
+    position: absolute;
+    right: 0;
+}
+
+.cartDivRight p {
+    position: absolute;
+    right: 300px;
+    /* top: 5px; */
+}
+
+.cartDivRight button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.cartDivRight span {
+    color: #fff;
+    font-size: 30px;
+}
+
+.subTotal {
+    position: absolute;
+    bottom: -20px;
+    right: 65px;
+    text-transform: uppercase;
 }

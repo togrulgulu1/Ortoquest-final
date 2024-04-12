@@ -101,10 +101,23 @@
     display: none;
 }
 
-.cart span {
+.cart span:first-child {
     font-size: 27px;
     cursor: pointer;
     color: #fff;
+}
+
+.cart span:last-child{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.cart .link{
+    text-decoration: none !important;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 3px;
 }
 
 

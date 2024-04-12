@@ -4,11 +4,14 @@ import { IoLogoTwitch, IoLogoInstagram } from "react-icons/io";
 import { FaYoutube } from "react-icons/fa6";
 import { PiShoppingCartSimpleFill } from "react-icons/pi";
 import { Link, NavLink, useLocation } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 
 const Navbar = () => {
 
     const [active, setActive] = useState(false)
+     
+    const count = useSelector((state)=> state.cart.cartTotalQuantity)
 
     const click = () => {
 
@@ -181,6 +184,7 @@ const Navbar = () => {
                                 <span className='flex'>
                                     <PiShoppingCartSimpleFill />
                                 </span>
+                                <span>{count}</span>
                             </NavLink>
                         </div>
 
