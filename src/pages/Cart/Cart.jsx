@@ -9,6 +9,7 @@ const Cart = () => {
 
   const cart = useSelector((state) => state.cart)
   const selectedSize = useSelector(state => state.cart.selectedSize);
+  const id = useSelector(state => state.cart.id);
   const cartItem = useSelector(state => state.cart.cartItem)
   const dispatch = useDispatch()
 
@@ -46,7 +47,7 @@ const Cart = () => {
                     <div className="btn">
                       <button onClick={() => dispatch(decreaseBtn(item))}>-</button>
                       <span>{item.cartQuantity}</span>
-                      <button onClick={() => dispatch(addToCart({ ...item, selectedSize }))}>+</button>
+                      <button onClick={() => dispatch(addToCart({ ...item }))}>+</button>
                     </div>
                   </div>
 
