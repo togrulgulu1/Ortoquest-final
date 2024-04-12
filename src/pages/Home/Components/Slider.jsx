@@ -1,6 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Link } from 'react-router-dom';
 
 import "../assets/css/slider.css"
 import 'swiper/css';
@@ -56,15 +57,21 @@ const Slider = ({ image }) => {
             >
                 {image.map(slide => (
 
+
                     <SwiperSlide key={slide.id}>
 
-                        <div className="imgDiv" id={slide.id}>
-                            <img src={slide.src} alt="" />
-                            <h4>{slide.title}</h4>
-                            <p>${slide.price}.00</p>
-                        </div>
+                        <Link className='shopLink' to={`/product-details/${slide.slug}`}>
+
+                            <div className="imgDiv" id={slide.id}>
+                                <img src={slide.src} alt="" />
+                                <h4>{slide.title}</h4>
+                                <p>${slide.price}.00</p>
+                            </div>
+
+                        </Link>
 
                     </SwiperSlide>
+
 
                 ))}
 
