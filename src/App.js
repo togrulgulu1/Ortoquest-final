@@ -14,6 +14,8 @@ import "aos/dist/aos.css"
 import Login from './pages/Login/Login';
 import Forgot from './pages/Login/Forgot';
 import NotFound from './pages/NotFound/NotFound';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -83,6 +85,7 @@ const App = () => {
         <>
 
             <RouterProvider router={router} />
+            <ToastContainer />
 
         </>
     )

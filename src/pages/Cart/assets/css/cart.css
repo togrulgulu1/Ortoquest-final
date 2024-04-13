@@ -109,7 +109,7 @@
     position: absolute;
     bottom: -20px;
     right: 65px;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 

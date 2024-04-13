@@ -4,18 +4,28 @@ import { useDispatch, useSelector } from 'react-redux'
 import NotCart from './NotCart'
 import { addToCart, decreaseBtn, deleteBtn, getTotal } from '../../features/counterSlice'
 import { IoClose } from "react-icons/io5";
+import { toast } from 'react-toastify'
 
 const Cart = () => {
 
   const cart = useSelector((state) => state.cart)
-  const selectedSize = useSelector(state => state.cart.selectedSize);
-  const id = useSelector(state => state.cart.id);
+  // const selectedSize = useSelector(state => state.cart.selectedSize);
+  // const id = useSelector(state => state.cart.id);
   const cartItem = useSelector(state => state.cart.cartItem)
   const dispatch = useDispatch()
 
   useEffect(() => {
     dispatch(getTotal())
   }, [cart, dispatch])
+
+  const deleteClick = (item) => {
+
+    dispatch(deleteBtn(item))
+    toast.info(`${item.title}. Size: ${item.selectedSize} removed from cart`,{
+      position: "top-center",
+    })
+    
+  }
 
 
   return (
@@ -55,9 +65,9 @@ const Cart = () => {
 
                   <div className='cartDivRight'>
 
-                    <button onClick={() => dispatch(deleteBtn(item))}><span><IoClose /></span></button>
+                    <button onClick={() => deleteClick(item)}><span><IoClose /></span></button>   
                     <p className='cartDivPrice'>${item.totalPrice}.00</p>
-                    
+
                   </div>
 
                 </div>

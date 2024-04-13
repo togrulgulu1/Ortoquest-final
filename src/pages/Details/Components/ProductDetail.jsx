@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import { useDispatch } from "react-redux"
 import 'swiper/css';
 import { addToCart } from '../../../features/counterSlice';
+import { toast } from 'react-toastify';
 
 const ProductDetail = ({ images }) => {
 
@@ -23,6 +24,10 @@ const ProductDetail = ({ images }) => {
 
             dispatch(addToCart({ ...product, selectedSize }))
             setError('')
+            toast.success(`${product.title}. Size: ${selectedSize} added to cart`,{
+                position: "top-center",
+                autoClose: 2500,
+            })
 
         }
 
@@ -55,7 +60,7 @@ const ProductDetail = ({ images }) => {
                                 <option value="L">{product.large}</option>
                                 <option value="X-Large">{product.xLarge}</option>
                             </select>
-                        {error && <p className='errorDesc flex' style={{ color: 'red' }}>{error}</p>}
+                            {error && <p className='errorDesc flex' style={{ color: 'red' }}>{error}</p>}
                         </div>
 
                         {/* <div className="selectCount">
