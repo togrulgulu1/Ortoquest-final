@@ -23,6 +23,7 @@ const Cart = () => {
     dispatch(deleteBtn(item))
     toast.info(`${item.title}. Size: ${item.selectedSize} removed from cart`,{
       position: "top-center",
+      autoClose: 3000,
     })
     
   }

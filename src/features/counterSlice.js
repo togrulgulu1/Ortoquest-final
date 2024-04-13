@@ -59,13 +59,9 @@ export const cartSlice = createSlice({
 
       const { id, selectedSize } = action.payload
       const nextCart = state.cartItem.filter((item) => !(item.id === id && item.selectedSize === selectedSize));
-      // state.cartItem = nextCart;
+      state.cartItem = nextCart;
       localStorage.setItem('cartItem', JSON.stringify(state.cartItem))
-      return {
-        ...state,
-        cartItem: nextCart
-      };
-
+      
     },
 
     getTotal(state, action) {

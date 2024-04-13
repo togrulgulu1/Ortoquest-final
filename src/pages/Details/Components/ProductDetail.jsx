@@ -26,7 +26,7 @@ const ProductDetail = ({ images }) => {
             setError('')
             toast.success(`${product.title}. Size: ${selectedSize} added to cart`,{
                 position: "top-center",
-                autoClose: 2500,
+                autoClose: 3000,
             })
 
         }
