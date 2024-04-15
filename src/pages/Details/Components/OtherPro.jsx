@@ -31,6 +31,7 @@ const OtherPro = ({ images }) => {
 
                                         <h4>{image.title}</h4>
                                         <p>${image.price}.00</p>
+                                        
                                     </div>
 
                                 </div>

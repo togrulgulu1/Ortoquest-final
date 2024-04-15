@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "../assets/css/productDetail.css"
-import { useParams } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
 import { useDispatch } from "react-redux"
 import 'swiper/css';
 import { addToCart } from '../../../features/counterSlice';
@@ -13,10 +13,15 @@ const ProductDetail = ({ images }) => {
     const { slug } = useParams()
     const product = images.find((image) => image.slug === slug)
     const dispatch = useDispatch()
+    const location = useLocation()
+
+    useEffect(() => {
+        setSelectedSize('')
+    }, [location.pathname])
 
     const handleClick = (product) => {
 
-        if (selectedSize === 'all') {
+        if (!selectedSize) {
 
             setError('Please select a size')
 
@@ -24,7 +29,7 @@ const ProductDetail = ({ images }) => {
 
             dispatch(addToCart({ ...product, selectedSize }))
             setError('')
-            toast.success(`${product.title}. Size: ${selectedSize} added to cart`,{
+            toast.success(`${product.title}. Size: ${selectedSize} added to cart`, {
                 position: "top-center",
                 autoClose: 3000,
             })
@@ -58,7 +63,7 @@ const ProductDetail = ({ images }) => {
                                 <option value="S">{product.small}</option>
                                 <option value="M">{product.medium}</option>
                                 <option value="L">{product.large}</option>
-                                <option value="X-Large">{product.xLarge}</option>
+                                <option value="XL">{product.xLarge}</option>
                             </select>
                             {error && <p className='errorDesc flex' style={{ color: 'red' }}>{error}</p>}
                         </div>
