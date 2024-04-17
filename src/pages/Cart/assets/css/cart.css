@@ -58,26 +58,51 @@
 
 .cartDiv .btn {
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartDiv .btn button:first-child{
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+}
+
+.cartDiv .btn button:last-child{
+    border-left: none;
+    border-radius: 0 10px 10px 0;
+}
+
+.cartDiv .btn button,
+.cartDiv .btn div{
+    background-color: #e13c33;
 }
 
 .cartDiv .btn button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30px;
-    height: 30px;
-    font-size: 30px;
-    border: none;
-    background: none;
+    width: 34px;
+    height: 37px;
+    font-size: 18px;
+    border: 1px solid #fff;
     color: #fff;
     cursor: pointer;
 }
 
-.cartDiv span {
-    margin: 0 5px;
-    margin-top: 6px;
+.cartDiv .btn div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -5px;
+    margin-right: -5px;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 400;
+    width: 40px;
+    height: 44px;
+    border: 1px solid #fff;
+    box-shadow: 0 0 2px rgb(255, 255, 255);
+    border-radius: 10px;
+    z-index: 1;
 }
 
 
@@ -153,16 +178,17 @@
     }
 
 
-    .subTotal h2{
+    .subTotal h2 {
         font-size: 25px;
     }
 }
 
-@media only screen and (max-width:380px){
+@media only screen and (max-width:380px) {
 
     .cartMain img {
         width: 120px;
         height: 110px;
+        margin-bottom: 10px;
     }
 
     .cartDiv h3 {
@@ -174,16 +200,26 @@
         font-size: 13px;
     }
 
-    .cartDivRight p{
+    .cartDiv .btn button{
+        width: 30px;
+        height: 33px;
+    }
+
+    .cartDiv .btn div{
+        width: 36px;
+        height: 40px;
+    }
+
+    .cartDivRight p {
         font-size: 16px;
         top: 85px;
     }
 
-    .subTotal{
+    .subTotal {
         position: static;
     }
 
-    .subTotal h2{
+    .subTotal h2 {
         margin-bottom: 0;
         font-size: 20px;
     }

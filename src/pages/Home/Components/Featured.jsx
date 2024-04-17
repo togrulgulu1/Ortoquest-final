@@ -6,17 +6,6 @@ import videos from "../../../video.json"
 
 const Featured = () => {
 
-    // let imgDivs = useRef([])
-    // let playBtns = useRef([])
-
-    // const handleClick = (index) => {
-    //     imgDivs.current[index].style.opacity = "0"
-    //     imgDivs.current[index].style.zIndex = "-5"
-    //     playBtns.current[index].style.opacity = "0"
-    //     playBtns.current[index].style.zIndex = "-5"
-
-    // }
-
     return (
         <>
 

@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import "./css/navbar.css"
 import { IoLogoTwitch, IoLogoInstagram } from "react-icons/io";
 import { FaYoutube } from "react-icons/fa6";
@@ -10,22 +10,12 @@ import { useSelector } from 'react-redux';
 const Navbar = () => {
 
     const [active, setActive] = useState(false)
-     
-    const count = useSelector((state)=> state.cart.cartTotalQuantity)
+
+    const count = useSelector((state) => state.cart.cartTotalQuantity)
 
     const click = () => {
 
         setActive(!active)
-
-        // if (!active) {
-
-        //     document.body.style.overflow = "hidden"
-
-        // } else {
-
-        //     document.body.style.overflow = "auto"
-
-        // }
 
     }
 
@@ -34,22 +24,71 @@ const Navbar = () => {
 
     useEffect(() => {
 
+        const barsColorToBlack = () => {
+
+            const bars = document.querySelectorAll('.burgerMenu span');
+            bars.forEach(bar => {
+                bar.style.backgroundColor = '#000';
+            });
+
+        }
+
+        const barsColorToWhite = () => {
+
+            const bars = document.querySelectorAll('.burgerMenu span');
+            bars.forEach(bar => {
+                bar.style.backgroundColor = '#fff';
+            });
+
+        }
+
+        const changeColorToBlack = () => {
+            const elements = document.querySelectorAll('#header span, #header p, .navbar span, .navbar p, .navbar .link');
+            elements.forEach(element => {
+                element.style.color = '#000';
+                element.style.fontWeight = '600'
+            });
+        };
+
+        const changeColorToWhite = () => {
+            const elements = document.querySelectorAll('#header span, #header p, .navbar span, .navbar p, .navbar .link');
+            elements.forEach(element => {
+                element.style.color = '#fff';
+                element.style.fontWeight = '400'
+
+            });
+        };
+
         const header = document.querySelector("#header")
         const navbar = document.querySelector(".navbar")
 
-        if (location.pathname === "/merch" || location.pathname.includes("/product-details") || location.pathname.includes("/cart")) {
+        if (location.pathname === "/merch" ||
+            location.pathname.includes("/product-details") ||
+            location.pathname.includes("/cart")) {
 
             header.style.backgroundColor = "#e13c33";
             navbar.style.backgroundColor = "#e13c33";
+            changeColorToWhite()
+            barsColorToWhite()
+
+        } else if (location.pathname === "/about") {
+
+            header.style.backgroundColor = "#e4e4e4";
+            navbar.style.backgroundColor = "#e4e4e4";
+            changeColorToBlack()
+            barsColorToBlack()
 
         } else {
 
             header.style.backgroundColor = "#000";
             navbar.style.backgroundColor = "#000";
+            changeColorToWhite()
+            barsColorToWhite()
 
         }
 
-    })
+    }, [location.pathname])
+
     return (
         <>
 

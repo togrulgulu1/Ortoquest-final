@@ -1,12 +1,26 @@
-import React, { useRef } from 'react'
+import React, { useState, useRef } from 'react'
 import '../assets/css/showsVideos.css'
 
 const ShowsVideos = ({ videos }) => {
+
+    const [active, setActive] = useState(null)
 
     let imgDivs = useRef([])
     let playBtns = useRef([])
 
     const handleClick = (index) => {
+
+        if (active !== null) {
+
+            imgDivs.current[active].style.opacity = "1"
+            imgDivs.current[active].style.zIndex = "5"
+            playBtns.current[active].style.opacity = "1"
+            playBtns.current[active].style.zIndex = "5"
+
+        }
+
+        setActive(index)
+
         imgDivs.current[index].style.opacity = "0"
         imgDivs.current[index].style.zIndex = "-5"
         playBtns.current[index].style.opacity = "0"

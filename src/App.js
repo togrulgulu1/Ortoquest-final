@@ -16,6 +16,7 @@ import Forgot from './pages/Login/Forgot';
 import NotFound from './pages/NotFound/NotFound';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import About from './pages/About/About';
 
 
 
@@ -61,11 +62,15 @@ const App = () => {
                 },
                 {
                     path: "/forgot-password",
-                    element: <Forgot />
+                    element: <NotFound />
                 },
                 {
                     path: "/cart",
                     element: <Cart />
+                },
+                {
+                    path: "/about",
+                    element: <About />
                 }
 
             ]
@@ -76,6 +81,7 @@ const App = () => {
         }
 
     ]);
+    
     useEffect(() => {
         Aos.init();
     }, [])

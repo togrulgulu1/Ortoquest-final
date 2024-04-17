@@ -47,7 +47,11 @@ const Footer = () => {
                                     <span>support</span>
                                 </Link>
                             </li>
-                            <li>About</li>
+                            <li>
+                                <Link className='footLink' to={"/about"}>
+                                    <span>About</span>
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 
@@ -90,7 +94,7 @@ const Footer = () => {
                         <Link className='link' to={"https://www.linkedin.com/in/togrulquluyev/"} target='_blank'>
                             <span>TOGRULGULU</span>
                         </Link>
-                        
+
                     </div>
 
                 </div>

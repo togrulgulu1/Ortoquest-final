@@ -17,10 +17,14 @@
     height: 240px;
 }
 
+.videoComp img{
+    height: 225px !important;
+}
+
 .videoComp img {
     z-index: 1;
     position: absolute;
-    top: 0;
+    top: 8px;
     left: 0;
     transition: 0.3s;
 }
@@ -61,7 +65,11 @@
     .videoComp img,
     .videoComp iframe {
         width: 338px;
-        height: 190px;
+        height: 190px !important;
+    }
+
+    .videoComp img{
+        top: 0;
     }
 
 }
@@ -72,7 +80,7 @@
     .videoComp img,
     .videoComp iframe {
         width: 398px;
-        height: 230px;
+        height: 230px !important;
     }
 
     .videoDiv {
@@ -88,7 +96,7 @@
     .videoComp img,
     .videoComp iframe {
         width: 288px;
-        height: 170px;
+        height: 170px !important;
     }
 
     .videoComp button {

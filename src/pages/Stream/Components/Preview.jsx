@@ -36,7 +36,7 @@ const Preview = ({ videos }) => {
                                 </button>
 
 
-                                <iframe src={video.src} frameborder="0"></iframe>
+                                <iframe src={video.src} frameBorder="0"></iframe>
                             </div>
 
                         ) : null;

@@ -58,7 +58,7 @@ const Cart = () => {
                     <p className='cartDivSize'>Size: {item.selectedSize}</p>
                     <div className="btn">
                       <button onClick={() => dispatch(decreaseBtn(item))}>-</button>
-                      <span>{item.cartQuantity}</span>
+                      <div>{item.cartQuantity}</div>
                       <button onClick={() => dispatch(addToCart({ ...item }))}>+</button>
                     </div>
 

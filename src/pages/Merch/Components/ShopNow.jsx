@@ -18,11 +18,11 @@ const ShopNow = ({ images }) => {
 
                         {images.map(image => (
 
-                            <Link className='shopLink' to={`/product-details/${image.slug}`}>
+                            <Link key={image.id} className='shopLink' to={`/product-details/${image.slug}`}>
 
-                                <div key={image.id}>
+                                <div  id={image.id}>
 
-                                    <div className="imgDivShop" id={image.id}>
+                                    <div className="imgDivShop">
 
                                         <div className="imageDiv">
                                             <img className='imgSmall' src={image.src} alt="" />
