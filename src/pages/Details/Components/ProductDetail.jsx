@@ -9,6 +9,7 @@ import { toast } from 'react-toastify';
 const ProductDetail = ({ images }) => {
 
     let [selectedSize, setSelectedSize] = useState('all');
+    let [quantity, setQuantity] = useState(1)
     let [error, setError] = useState(' ')
     const { slug } = useParams()
     const product = images.find((image) => image.slug === slug)
@@ -17,6 +18,7 @@ const ProductDetail = ({ images }) => {
 
     useEffect(() => {
         setSelectedSize('')
+        setQuantity(1)
     }, [location.pathname])
 
     const handleClick = (product) => {
@@ -27,7 +29,7 @@ const ProductDetail = ({ images }) => {
 
         } else {
 
-            dispatch(addToCart({ ...product, selectedSize }))
+            dispatch(addToCart({ ...product, selectedSize, quantity }))
             setError('')
             toast.success(`${product.title}. Size: ${selectedSize} added to cart`, {
                 position: "top-center",
@@ -54,7 +56,7 @@ const ProductDetail = ({ images }) => {
                     <div className="productData">
 
                         <h2>{product.title}</h2>
-                        <p className='productPrice'>${product.price}.00</p>
+                        <p className='productPrice'>${parseInt(product.price)}.00</p>
                         <p className='productDesc'>{product.desc}</p>
                         <div className="selectSize">
                             <p>Size:</p>
@@ -68,10 +70,11 @@ const ProductDetail = ({ images }) => {
                             {error && <p className='errorDesc flex' style={{ color: 'red' }}>{error}</p>}
                         </div>
 
-                        {/* <div className="selectCount">
+                        <div className="selectCount">
                             <p>Quantity:</p>
-                            <input type="number" min={1} max={10} defaultValue={1} />
-                        </div> */}
+                            <input value={quantity} type="number" min={1} defaultValue={1} onChange={(e) => setQuantity(parseInt(e.target.value))} />
+                        </div>
+
                         <button onClick={() => handleClick(product)}>Add to Cart</button>
 
                     </div>

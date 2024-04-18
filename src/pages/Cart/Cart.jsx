@@ -21,11 +21,11 @@ const Cart = () => {
   const deleteClick = (item) => {
 
     dispatch(deleteBtn(item))
-    toast.info(`${item.title}. Size: ${item.selectedSize} removed from cart`,{
+    toast.info(`${item.title}. Size: ${item.selectedSize} removed from cart`, {
       position: "top-center",
       autoClose: 3000,
     })
-    
+
   }
 
 
@@ -59,14 +59,14 @@ const Cart = () => {
                     <div className="btn">
                       <button onClick={() => dispatch(decreaseBtn(item))}>-</button>
                       <div>{item.cartQuantity}</div>
-                      <button onClick={() => dispatch(addToCart({ ...item }))}>+</button>
+                      <button onClick={() => dispatch(addToCart({ ...item, quantity: 1 }))}>+</button>
                     </div>
 
                   </div>
 
                   <div className='cartDivRight'>
 
-                    <button onClick={() => deleteClick(item)}><span><IoClose /></span></button>   
+                    <button onClick={() => deleteClick(item)}><span><IoClose /></span></button>
                     <p className='cartDivPrice'>${item.totalPrice}.00</p>
 
                   </div>

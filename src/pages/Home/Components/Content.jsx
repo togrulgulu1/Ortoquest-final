@@ -1,5 +1,6 @@
 import React from 'react'
 import "../assets/css/content.css"
+import { Link } from 'react-router-dom'
 
 const Content = () => {
 
@@ -22,7 +23,9 @@ const Content = () => {
                         </div>
 
                         <div className="contentBtn">
-                            <button>read more</button>
+                            <Link to={"/blog"}>
+                                <button>read more</button>
+                            </Link>
                         </div>
 
                     </div>

@@ -14,27 +14,26 @@ export const cartSlice = createSlice({
 
     addToCart(state, action) {
 
-      const { id, title, price, src, selectedSize } = action.payload;
+      const { id, title, price, src, selectedSize, quantity } = action.payload;
       const itemIndex = state.cartItem.findIndex((item) => item.id === id && item.selectedSize === selectedSize);
 
       if (itemIndex >= 0) {
 
-        state.cartItem[itemIndex].cartQuantity += 1
-        state.cartItem[itemIndex].totalPrice += price
-        state.cartTotalQuantity += 1
+        state.cartItem[itemIndex].cartQuantity += quantity
+        state.cartItem[itemIndex].totalPrice += price * quantity
+        state.cartTotalQuantity += quantity
 
       } else {
 
         const tempId = generateTempId()
-        const tempProduct = { id, tempId, title, price, src, cartQuantity: 1, totalPrice: price, selectedSize }
+        const tempProduct = { id, tempId, title, price, src, cartQuantity: quantity, totalPrice: price * quantity, selectedSize }
         state.cartItem.push(tempProduct)
-        state.cartTotalQuantity += 1
+        state.cartTotalQuantity += quantity
 
       }
 
       localStorage.setItem('cartItem', JSON.stringify(state.cartItem))
       state.selectedSize = selectedSize
-
     },
 
     decreaseBtn(state, action) {
@@ -95,49 +94,3 @@ export const cartSlice = createSlice({
 
 export const { addToCart, deleteBtn, decreaseBtn, getTotal } = cartSlice.actions
 export const cart = cartSlice.reducer;
-
-
-
-
-
-
-
-export const addItemToCart = (cartItems, cartItemToAdd, selectedSize) => {
-  const existingCartItem = cartItems.find(
-    (cartItem) => cartItem.id === cartItemToAdd.id
-  );
-  if (existingCartItem) {
-    if (existingCartItem.productSize === selectedSize) {
-      console.log('product sizes are the same');
-      return cartItems.map((cartItem) =>
-        cartItem.id === cartItemToAdd.id
-          ? {
-            ...cartItem,
-            quantity: cartItem.quantity + 1,
-          }
-          : cartItem
-      );
-    } else {
-      console.log('product sizes are not the same');
-      return cartItems.map((cartItem) =>
-        cartItem.id === cartItemToAdd.id
-          ? {
-            ...cartItem,
-            quantity: cartItem.quantity + 1,
-            productSize: selectedSize,
-          }
-          : cartItem
-      );
-    }
-  }
-  let randomId = Math.floor(1000 + Math.random() * 9000);
-  return [
-    ...cartItems,
-    {
-      ...cartItemToAdd,
-      tempId: randomId,
-      quantity: 1,
-      productSize: selectedSize,
-    },
-  ];
-};

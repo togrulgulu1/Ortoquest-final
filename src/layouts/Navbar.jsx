@@ -46,7 +46,6 @@ const Navbar = () => {
             const elements = document.querySelectorAll('#header span, #header p, .navbar span, .navbar p, .navbar .link');
             elements.forEach(element => {
                 element.style.color = '#000';
-                element.style.fontWeight = '600'
             });
         };
 
@@ -54,8 +53,6 @@ const Navbar = () => {
             const elements = document.querySelectorAll('#header span, #header p, .navbar span, .navbar p, .navbar .link');
             elements.forEach(element => {
                 element.style.color = '#fff';
-                element.style.fontWeight = '400'
-
             });
         };
 
