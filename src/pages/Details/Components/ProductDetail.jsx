@@ -72,7 +72,7 @@ const ProductDetail = ({ images }) => {
 
                         <div className="selectCount">
                             <p>Quantity:</p>
-                            <input value={quantity} type="number" min={1} defaultValue={1} onChange={(e) => setQuantity(parseInt(e.target.value))} />
+                            <input value={quantity} type="number" min={1} onChange={(e) => setQuantity(parseInt(e.target.value))} />
                         </div>
 
                         <button onClick={() => handleClick(product)}>Add to Cart</button>

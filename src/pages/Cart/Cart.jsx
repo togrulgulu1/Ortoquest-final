@@ -9,8 +9,6 @@ import { toast } from 'react-toastify'
 const Cart = () => {
 
   const cart = useSelector((state) => state.cart)
-  // const selectedSize = useSelector(state => state.cart.selectedSize);
-  // const id = useSelector(state => state.cart.id);
   const cartItem = useSelector(state => state.cart.cartItem)
   const dispatch = useDispatch()
 
@@ -48,30 +46,26 @@ const Cart = () => {
 
               {cartItem.map((item) => (
 
-                <div className='cartDiv' key={item.tempId} id={item.tempId}>
+                  <div className='cartDiv' key={item.tempId} id={item.tempId}>
 
-                  <img src={item.src} alt="" />
+                    <img src={item.src} alt="" />
 
-                  <div className='flex'>
+                    <div className='flex'>
+                      <h3 className='cartDivTitle'>{item.title}</h3>
+                      <p className='cartDivSize'>Size: {item.selectedSize}</p>
+                      <div className="btn">
+                        <button onClick={() => dispatch(decreaseBtn(item))}>-</button>
+                        <div>{item.cartQuantity}</div>
+                        <button onClick={() => dispatch(addToCart({ ...item, quantity: 1 }))}>+</button>
+                      </div>
+                    </div>
 
-                    <h3 className='cartDivTitle'>{item.title}</h3>
-                    <p className='cartDivSize'>Size: {item.selectedSize}</p>
-                    <div className="btn">
-                      <button onClick={() => dispatch(decreaseBtn(item))}>-</button>
-                      <div>{item.cartQuantity}</div>
-                      <button onClick={() => dispatch(addToCart({ ...item, quantity: 1 }))}>+</button>
+                    <div className='cartDivRight'>
+                      <button onClick={() => deleteClick(item)}><span><IoClose /></span></button>
+                      <p className='cartDivPrice'>${item.totalPrice}.00</p>
                     </div>
 
                   </div>
-
-                  <div className='cartDivRight'>
-
-                    <button onClick={() => deleteClick(item)}><span><IoClose /></span></button>
-                    <p className='cartDivPrice'>${item.totalPrice}.00</p>
-
-                  </div>
-
-                </div>
 
               ))}
 

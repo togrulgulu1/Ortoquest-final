@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { createBrowserRouter, Outlet, RouterProvider, useLocation } from "react-router-dom"
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom"
 import Stream from './pages/Stream/Stream';
 import Home from './pages/Home/Home';
 import Main from "./layouts/Main"
@@ -62,7 +62,7 @@ const App = () => {
                 },
                 {
                     path: "/forgot-password",
-                    element: <NotFound />
+                    element: <Forgot />
                 },
                 {
                     path: "/cart",
@@ -81,7 +81,7 @@ const App = () => {
         }
 
     ]);
-    
+
     useEffect(() => {
         Aos.init();
     }, [])

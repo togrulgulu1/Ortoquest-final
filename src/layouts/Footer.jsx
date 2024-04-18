@@ -90,7 +90,7 @@ const Footer = () => {
 
                     <div className="copyRight">
 
-                        <span>© Made with </span>
+                        <span>© Made by </span>
                         <Link className='link' to={"https://www.linkedin.com/in/togrulquluyev/"} target='_blank'>
                             <span>TOGRULGULU</span>
                         </Link>

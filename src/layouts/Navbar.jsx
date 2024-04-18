@@ -14,9 +14,13 @@ const Navbar = () => {
     const count = useSelector((state) => state.cart.cartTotalQuantity)
 
     const click = () => {
-
         setActive(!active)
+    }
 
+    const closeMenu = () => {
+        if (active) {
+            setActive(false)
+        }
     }
 
 
@@ -100,7 +104,7 @@ const Navbar = () => {
                     </button>
 
                     <div className="navLogo">
-                        <NavLink to={"/"} className="logoLink">
+                        <NavLink to={"/"} className="logoLink" onClick={closeMenu}>
                             <p>otroquest</p>
                         </NavLink>
                     </div>
@@ -130,6 +134,7 @@ const Navbar = () => {
                                         <span>videos</span>
                                     </NavLink>
                                 </li>
+
                                 <li>
                                     <NavLink
                                         to={"/merch"}
@@ -149,6 +154,7 @@ const Navbar = () => {
                                         <span>support</span>
                                     </NavLink>
                                 </li>
+
                                 <li>
                                     <NavLink
                                         to={"/blog"}
@@ -158,6 +164,7 @@ const Navbar = () => {
                                         <span>blog</span>
                                     </NavLink>
                                 </li>
+
                                 <li>
                                     <NavLink
                                         to={"/login"}
@@ -167,6 +174,7 @@ const Navbar = () => {
                                         <span>login</span>
                                     </NavLink>
                                 </li>
+
                             </ul>
 
 
@@ -216,6 +224,7 @@ const Navbar = () => {
                             <NavLink
                                 to={"/cart"}
                                 className={`link`}
+                                onClick={closeMenu}
                             >
                                 <span className='flex'>
                                     <PiShoppingCartSimpleFill />

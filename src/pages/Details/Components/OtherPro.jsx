@@ -18,9 +18,9 @@ const OtherPro = ({ images }) => {
 
                         {images.map(image => (
 
-                            <Link className='shopLink' to={`/product-details/${image.slug}`}>
+                            <Link key={image.id} className='shopLink' to={`/product-details/${image.slug}`}>
 
-                                <div key={image.id}>
+                                <div >
 
                                     <div className="imgDivShop" id={image.id}>
 
